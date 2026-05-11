@@ -1,0 +1,56 @@
+{
+    "header": {
+        "contact": "DIZER OLÁ"
+    },
+    "menu": {
+        "about": "Quem sou eu?",
+        "portfolio": "O que já fiz.",
+        "previous": "Anterior",
+        "next": "Seguinte"
+    },
+    "home": {
+        "headline_part1": "A ponte entre o",
+        "headline_part2": "Design Visual",
+        "headline_part3": "e a",
+        "headline_part4": "Engenharia Criativa.",
+        "featured_label": "VER UM DOS MEUS TRABALHOS",
+        "featured_alt": "Projeto em destaque"
+    },
+    "about": {
+        "intro_part1": "Sou Diogo Conde, um ",
+        "intro_bold": "Tecnólogo Criativo",
+        "intro_part2": " na interseção entre design e código. Trabalho a estética ao milímetro e dou-lhe vida através da tecnologia, seja num ecrã, num palco virtual ou numa instalação física.",
+        "timeline_origin": "A ORIGEM",
+        "timeline_direction": "DIREÇÃO CRIATIVA E TÉCNICA",
+        "timeline_explorer": "O LADO EXPLORADOR",
+        "col1": "Toda a minha vida profissional esteve ligada ao design gráfico e digital. É uma paixão antiga — desde criança, a ver desenhos animados, sabia exatamente o que queria fazer. Hoje, transformo essa imaginação em realidade através do Design, Animação e Efeitos Visuais.",
+        "col2": "No meu último cargo, trabalhei como Diretor Criativo e Técnico, assumindo a responsabilidade por toda a produção virtual 3D nos setores de eventos e publicidade, bem como criação de conteúdos e planeamento de eventos. O meu papel ia muito além da execução visual: envolvia projetar ambientes imersivos, criar animações e efeitos visuais.",
+        "col3": "Considero-me uma mente eternamente curiosa e um autodidata crónico, sempre à procura de novas tecnologias. Esta necessidade de explorar levou-me a testar ferramentas de Inteligência Artificial, desenvolver aplicações para diversas plataformas e mergulhar na eletrónica. Adoro sujar as mãos a programar, criando instalações interativas imersivas que ligam o mundo físico ao digital."
+    },
+    "project": {
+        "back": "Voltar"
+    },
+    "footer": {
+        "text": "Todos os Direitos Reservados DIO 2026"
+    },
+    "projects": {
+        "p1": { "title": "Design de Palco para Congresso", "objective": "Projetar e produzir um palco virtual completo para um congresso empresarial de grande escala.", "description": "Design completo de palco 3D e produção visual em tempo real para um grande congresso empresarial internacional, incluindo conteúdo LED, motion graphics e integração com câmara ao vivo." },
+        "p2": { "title": "Circo de Natal", "objective": "Criar um ambiente mágico e imersivo com tema de circo para um evento sazonal.", "description": "Visualização 3D e design ambiental para um evento interativo de Natal, combinando mapeamento de projeção, design cénico e conteúdo animado." },
+        "p3": { "title": "Visualização de Interiores", "objective": "Produzir renders 3D fotorrealistas para um projeto de design de interiores.", "description": "Visualização arquitetónica de um quarto de hotel de luxo, com foco em iluminação, materiais e composição espacial." },
+        "p4": { "title": "Branding de Evento", "objective": "Desenvolver a identidade visual e gráficos ambientais para um evento corporativo.", "description": "Design de marca completo incluindo sinalética, crachás, gráficos de palco e peças de motion para um grande evento corporativo." },
+        "p5": { "title": "Congresso Empresarial 34ª Edição", "objective": "Projetar o ambiente visual completo para a 34ª edição de um grande congresso empresarial.", "description": "Direção criativa completa para um evento anual recorrente incluindo design de palco, criação de conteúdo LED e efeitos visuais em tempo real." },
+        "p6": { "title": "Experiência de Quiz Interativo", "objective": "Construir um sistema de quiz interativo para uma audiência ao vivo num evento corporativo.", "description": "Experiência de quiz interativo em tempo real para participantes de eventos usando software personalizado, mecânicas de participação da audiência e resultados dinâmicos no ecrã." },
+        "p7": { "title": "Sistema de Identidade de Marca", "objective": "Criar um sistema abrangente de identidade de marca para uma empresa de tecnologia.", "description": "Desenvolvimento completo de identidade de marca incluindo logótipo, tipografia, sistema cromático, estacionário e templates de ativos digitais." },
+        "p8": { "title": "Encontro de Executivos", "objective": "Projetar a identidade visual e palco para um encontro corporativo de nível executivo.", "description": "Design de evento premium incluindo iluminação ambiental, conteúdo de vídeo com marca e um setup de palco minimalista para apresentações C-suite." },
+        "p9": { "title": "UI/UX de App Mobile", "objective": "Projetar a interface de utilizador e experiência para uma aplicação mobile.", "description": "Design completo de UI/UX para uma app mobile multiplataforma, incluindo fluxos de utilizador, wireframes, protótipos de alta fidelidade e um design system." },
+        "p10": { "title": "Renderização 3D de Produto", "objective": "Criar renders fotorrealistas de produto para uso em marketing e e-commerce.", "description": "Renderização 3D de produto de alta qualidade com materiais realistas, iluminação de estúdio e pós-produção para catálogo e redes sociais." },
+        "p11": { "title": "Palco Imersivo", "objective": "Criar uma experiência de palco imersiva a 360 graus usando mapeamento de projeção.", "description": "Design e produção técnica de um ambiente de palco imersivo com mapeamento de projeção para um evento de música ao vivo." },
+        "p12": { "title": "Visualização de Quarto", "objective": "Criar um render fotorrealista de interior para um projeto residencial.", "description": "Visualização 3D detalhada de um conceito de quarto de luxo com mobiliário personalizado, iluminação ambiente e estudos de materiais." },
+        "p13": { "title": "Design de Plataforma Web", "objective": "Projetar a interface de utilizador para uma plataforma web SaaS.", "description": "Design e prototipagem de UI/UX para uma plataforma web profissional incluindo dashboard, fluxo de onboarding e biblioteca de componentes." },
+        "p14": { "title": "Instalação Física", "objective": "Projetar e produzir uma instalação interativa física para uma ativação de marca.", "description": "Uma instalação interativa combinando eletrónica, tiras LED, sensores e software personalizado para criar uma experiência físico-digital." },
+        "p15": { "title": "Fotografia de Produto", "objective": "Criar uma série de fotos de estúdio de produto para uma linha de merchandising.", "description": "Direção artística e pós-produção para uma campanha de fotografia de produto, combinando renders 3D com fotografia prática." },
+        "p16": { "title": "Coleção de Logótipos", "objective": "Desenvolver uma coleção de logótipos para várias marcas e projetos.", "description": "Uma seleção curada de designs de logótipos abrangendo diferentes indústrias e estilos, desde wordmarks minimalistas a símbolos geométricos." },
+        "p17": { "title": "Reel de Motion", "objective": "Produzir um showreel de motion graphics destacando trabalhos de animação.", "description": "Uma compilação de peças de motion design incluindo sequências de título, animações explicativas e aberturas de eventos." },
+        "p18": { "title": "Showcase de Ecrãs de App", "objective": "Projetar e apresentar ecrãs de app mobile de alta fidelidade para um pitch a cliente.", "description": "Mockups polidos de ecrãs de app mobile apresentando fluxos de utilizador, linguagem visual e padrões de interação para uma aplicação fintech." }
+    }
+}

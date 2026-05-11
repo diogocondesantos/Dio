@@ -1,0 +1,330 @@
+[
+    {
+        "id": "3d_apdc",
+        "titleKey": "projects.p1.title",
+        "objectiveKey": "projects.p1.objective",
+        "descriptionKey": "projects.p1.description",
+        "title": "Congress Stage Design",
+        "objective": "Design and produce a complete virtual stage for a large-scale business congress.",
+        "description": "Full 3D stage design and real-time visual production for a major international business congress, including LED content, motion graphics and live camera integration.",
+        "year": "2025",
+        "categories": ["3D VIZ"],
+        "thumbnail": "assets/projects/3d/3d_apdc/3d_apdc_thumbnail.jpg",
+        "media": [
+            { "type": "image", "url": "assets/projects/3d/3d_apdc/3d_apdc_1.jpg" },
+            { "type": "image", "url": "assets/projects/3d/3d_apdc/3d_apdc_2.jpg" },
+            { "type": "image", "url": "assets/projects/3d/3d_apdc/3d_apdc_3.jpg" },
+            { "type": "image", "url": "assets/projects/3d/3d_apdc/3d_apdc_4.jpg" }
+        ]
+    },
+    {
+        "id": "3d_layers",
+        "titleKey": "projects.p2.title",
+        "objectiveKey": "projects.p2.objective",
+        "descriptionKey": "projects.p2.description",
+        "title": "Christmas Circus",
+        "objective": "Create a magical, immersive circus-themed environment for a seasonal event.",
+        "description": "3D visualization and environmental design for an interactive Christmas event, combining projection mapping, scenic design and animated content.",
+        "year": "2024",
+        "categories": ["3D VIZ"],
+        "thumbnail": "assets/projects/3d/3d_layers/3d_layers_thumbnail.jpg",
+        "media": [
+            { "type": "image", "url": "assets/projects/3d/3d_layers/3d_layers_1.jpg" },
+            { "type": "image", "url": "assets/projects/3d/3d_layers/3d_layers_2.jpg" },
+            { "type": "image", "url": "assets/projects/3d/3d_layers/3d_layers_3.jpg" },
+            { "type": "image", "url": "assets/projects/3d/3d_layers/3d_layers_4.jpg" },
+            { "type": "image", "url": "assets/projects/3d/3d_layers/3d_layers_5.jpg" },
+            { "type": "image", "url": "assets/projects/3d/3d_layers/3d_layers_6.jpg" }
+        ]
+    },
+    {
+        "id": "3d_nos",
+        "titleKey": "projects.p3.title",
+        "objectiveKey": "projects.p3.objective",
+        "descriptionKey": "projects.p3.description",
+        "title": "Interior Visualization",
+        "objective": "Produce photorealistic 3D renders for an interior design project.",
+        "description": "Architectural visualization for a luxury hotel room, focusing on lighting, materials, and spatial composition.",
+        "year": "2024",
+        "categories": ["3D VIZ"],
+        "thumbnail": "assets/projects/3d/3d_nos/3d_nos_thumbnail.jpg",
+        "media": [
+            { "type": "image", "url": "assets/projects/3d/3d_nos/3d_nos_1.jpg" },
+            { "type": "image", "url": "assets/projects/3d/3d_nos/3d_nos_2.jpg" },
+            { "type": "video", "url": "assets/projects/3d/3d_nos/3d_nos_3.mp4" },
+            { "type": "video", "url": "assets/projects/3d/3d_nos/3d_nos_4.mp4" },
+            { "type": "image", "url": "assets/projects/3d/3d_nos/3d_nos_5.jpg" }
+        ]
+    },
+    {
+        "id": "3d_nttdata",
+        "titleKey": "projects.p4.title",
+        "objectiveKey": "projects.p4.objective",
+        "descriptionKey": "projects.p4.description",
+        "title": "Event Branding",
+        "objective": "Develop the visual identity and environmental graphics for a corporate event.",
+        "description": "Complete brand design including signage, badges, stage graphics, and motion pieces for a large corporate gathering.",
+        "year": "2023",
+        "categories": ["3D VIZ"],
+        "thumbnail": "assets/projects/3d/3d_nttdata/3d_nttdata_thumbnail.jpg",
+        "media": [
+            { "type": "image", "url": "assets/projects/3d/3d_nttdata/3d_nttdata_1.jpg" },
+            { "type": "image", "url": "assets/projects/3d/3d_nttdata/3d_nttdata_2.jpg" },
+            { "type": "image", "url": "assets/projects/3d/3d_nttdata/3d_nttdata_3.jpg" },
+            { "type": "image", "url": "assets/projects/3d/3d_nttdata/3d_nttdata_4.jpg" },
+            { "type": "image", "url": "assets/projects/3d/3d_nttdata/3d_nttdata_5.jpg" },
+            { "type": "image", "url": "assets/projects/3d/3d_nttdata/3d_nttdata_6.jpg" }
+        ]
+    },
+    {
+        "id": "3d_toji",
+        "titleKey": "projects.p5.title",
+        "objectiveKey": "projects.p5.objective",
+        "descriptionKey": "projects.p5.description",
+        "title": "Business Congress 34th Edition",
+        "objective": "Design the complete visual environment for the 34th edition of a major business congress.",
+        "description": "End-to-end creative direction for a recurring annual event including stage design, LED content creation and real-time visual effects.",
+        "year": "2024",
+        "categories": ["3D VIZ"],
+        "thumbnail": "assets/projects/3d/3d_toji/3d_toji_thumbnail.jpg",
+        "media": [
+            { "type": "image", "url": "assets/projects/3d/3d_toji/3d_toji_1.jpg" },
+            { "type": "image", "url": "assets/projects/3d/3d_toji/3d_toji_10.jpg" },
+            { "type": "image", "url": "assets/projects/3d/3d_toji/3d_toji_11.jpg" },
+            { "type": "image", "url": "assets/projects/3d/3d_toji/3d_toji_12.jpg" },
+            { "type": "image", "url": "assets/projects/3d/3d_toji/3d_toji_2.jpg" },
+            { "type": "image", "url": "assets/projects/3d/3d_toji/3d_toji_3.jpg" },
+            { "type": "image", "url": "assets/projects/3d/3d_toji/3d_toji_4.jpg" },
+            { "type": "image", "url": "assets/projects/3d/3d_toji/3d_toji_5.jpg" },
+            { "type": "image", "url": "assets/projects/3d/3d_toji/3d_toji_6.jpg" },
+            { "type": "image", "url": "assets/projects/3d/3d_toji/3d_toji_7.jpg" },
+            { "type": "image", "url": "assets/projects/3d/3d_toji/3d_toji_8.jpg" },
+            { "type": "image", "url": "assets/projects/3d/3d_toji/3d_toji_9.jpg" }
+        ]
+    },
+    {
+        "id": "design_btobee",
+        "titleKey": "projects.p6.title",
+        "objectiveKey": "projects.p6.objective",
+        "descriptionKey": "projects.p6.description",
+        "title": "Interactive Quiz Experience",
+        "objective": "Build an interactive quiz system for a live audience at a corporate event.",
+        "description": "Real-time interactive quiz experience for event attendees using custom software, audience participation mechanics and dynamic on-screen results.",
+        "year": "2024",
+        "categories": ["DESIGN"],
+        "thumbnail": "assets/projects/design/design_btobee/design_btobee_thumbnail.jpg",
+        "media": [
+            { "type": "image", "url": "assets/projects/design/design_btobee/design_btobee_1.jpg" }
+        ]
+    },
+    {
+        "id": "design_organoleve",
+        "titleKey": "projects.p7.title",
+        "objectiveKey": "projects.p7.objective",
+        "descriptionKey": "projects.p7.description",
+        "title": "Brand Identity System",
+        "objective": "Create a comprehensive brand identity system for a technology company.",
+        "description": "Full brand identity development including logo, typography, color system, stationery and digital asset templates.",
+        "year": "2023",
+        "categories": ["DESIGN"],
+        "thumbnail": "assets/projects/design/design_organoleve/design_organoleve_thumbnail.jpg",
+        "media": [
+            { "type": "image", "url": "assets/projects/design/design_organoleve/design_organoleve_1.jpg" }
+        ]
+    },
+    {
+        "id": "design_simple",
+        "titleKey": "projects.p8.title",
+        "objectiveKey": "projects.p8.objective",
+        "descriptionKey": "projects.p8.description",
+        "title": "Executives Meeting",
+        "objective": "Design the visual identity and stage for an executive-level corporate meeting.",
+        "description": "Premium event design including ambient lighting, branded video content and a minimalist stage setup for C-suite presentations.",
+        "year": "2024",
+        "categories": ["DESIGN"],
+        "thumbnail": "assets/projects/design/design_simple/design_simple_thumbnail.jpg",
+        "media": [
+            { "type": "image", "url": "assets/projects/design/design_simple/design_simple_1.jpg" }
+        ]
+    },
+    {
+        "id": "digitaluiux_benzo",
+        "titleKey": "projects.p9.title",
+        "objectiveKey": "projects.p9.objective",
+        "descriptionKey": "projects.p9.description",
+        "title": "Mobile App UI/UX",
+        "objective": "Design the user interface and experience for a mobile application.",
+        "description": "Complete UI/UX design for a cross-platform mobile app, including user flows, wireframes, high-fidelity prototypes and a design system.",
+        "year": "2025",
+        "categories": ["DIGITAL UI/UX"],
+        "thumbnail": "assets/projects/digitaluiux/digitaluiux_benzo/digitaluiux_benzo_thumbnail.jpg",
+        "media": [
+            { "type": "video", "url": "assets/projects/digitaluiux/digitaluiux_benzo/digitaluiux_benzo_1.mp4" },
+            { "type": "image", "url": "assets/projects/digitaluiux/digitaluiux_benzo/digitaluiux_benzo_2.jpg" },
+            { "type": "image", "url": "assets/projects/digitaluiux/digitaluiux_benzo/digitaluiux_benzo_3.jpg" },
+            { "type": "image", "url": "assets/projects/digitaluiux/digitaluiux_benzo/digitaluiux_benzo_4.jpg" }
+        ]
+    },
+    {
+        "id": "digitaluiux_ducky",
+        "titleKey": "projects.p10.title",
+        "objectiveKey": "projects.p10.objective",
+        "descriptionKey": "projects.p10.description",
+        "title": "Product 3D Rendering",
+        "objective": "Create photorealistic product renders for marketing and e-commerce use.",
+        "description": "High-quality 3D product rendering with realistic materials, studio lighting and post-production for catalog and social media assets.",
+        "year": "2023",
+        "categories": ["DIGITAL UI/UX"],
+        "thumbnail": "assets/projects/digitaluiux/digitaluiux_ducky/digitaluiux_ducky_thumbnail.jpg",
+        "media": [
+            { "type": "video", "url": "assets/projects/digitaluiux/digitaluiux_ducky/digitaluiux_ducky_1.mp4" },
+            { "type": "image", "url": "assets/projects/digitaluiux/digitaluiux_ducky/digitaluiux_ducky_10.jpg" },
+            { "type": "image", "url": "assets/projects/digitaluiux/digitaluiux_ducky/digitaluiux_ducky_11.jpg" },
+            { "type": "image", "url": "assets/projects/digitaluiux/digitaluiux_ducky/digitaluiux_ducky_12.jpg" },
+            { "type": "image", "url": "assets/projects/digitaluiux/digitaluiux_ducky/digitaluiux_ducky_2.jpg" },
+            { "type": "image", "url": "assets/projects/digitaluiux/digitaluiux_ducky/digitaluiux_ducky_3.jpg" },
+            { "type": "image", "url": "assets/projects/digitaluiux/digitaluiux_ducky/digitaluiux_ducky_4.jpg" },
+            { "type": "image", "url": "assets/projects/digitaluiux/digitaluiux_ducky/digitaluiux_ducky_5.jpg" },
+            { "type": "image", "url": "assets/projects/digitaluiux/digitaluiux_ducky/digitaluiux_ducky_6.jpg" },
+            { "type": "image", "url": "assets/projects/digitaluiux/digitaluiux_ducky/digitaluiux_ducky_7.jpg" },
+            { "type": "image", "url": "assets/projects/digitaluiux/digitaluiux_ducky/digitaluiux_ducky_8.jpg" },
+            { "type": "image", "url": "assets/projects/digitaluiux/digitaluiux_ducky/digitaluiux_ducky_9.jpg" }
+        ]
+    },
+    {
+        "id": "digitaluiux_omni",
+        "titleKey": "projects.p11.title",
+        "objectiveKey": "projects.p11.objective",
+        "descriptionKey": "projects.p11.description",
+        "title": "Immersive Stage",
+        "objective": "Create a 360-degree immersive stage experience using projection mapping.",
+        "description": "Design and technical production of an immersive projection-mapped stage environment for a live music event.",
+        "year": "2024",
+        "categories": ["DIGITAL UI/UX"],
+        "thumbnail": "assets/projects/digitaluiux/digitaluiux_omni/digitaluiux_omni_thumbnail.jpg",
+        "media": [
+            { "type": "image", "url": "assets/projects/digitaluiux/digitaluiux_omni/digitaluiux_omni_1.jpg" },
+            { "type": "video", "url": "assets/projects/digitaluiux/digitaluiux_omni/digitaluiux_omni_2.mp4" }
+        ]
+    },
+    {
+        "id": "digitaluiux_romanovska",
+        "titleKey": "projects.p12.title",
+        "objectiveKey": "projects.p12.objective",
+        "descriptionKey": "projects.p12.description",
+        "title": "Bedroom Visualization",
+        "objective": "Create a photorealistic interior render for a residential project.",
+        "description": "Detailed 3D visualization of a luxury bedroom concept featuring custom furniture, mood lighting and material studies.",
+        "year": "2023",
+        "categories": ["DIGITAL UI/UX"],
+        "thumbnail": "assets/projects/digitaluiux/digitaluiux_romanovska/digitaluiux_romanovska_thumbnail.jpg",
+        "media": [
+            { "type": "image", "url": "assets/projects/digitaluiux/digitaluiux_romanovska/digitaluiux_romanovska_1.jpg" },
+            { "type": "video", "url": "assets/projects/digitaluiux/digitaluiux_romanovska/digitaluiux_romanovska_2.mp4" }
+        ]
+    },
+    {
+        "id": "interactive_carlarocha",
+        "titleKey": "projects.p13.title",
+        "objectiveKey": "projects.p13.objective",
+        "descriptionKey": "projects.p13.description",
+        "title": "Web Platform Design",
+        "objective": "Design the user interface for a web-based SaaS platform.",
+        "description": "UI/UX design and prototyping for a professional web platform including dashboard, onboarding flow and component library.",
+        "year": "2025",
+        "categories": ["INTERACTIVE"],
+        "thumbnail": "assets/projects/interactive/interactive_carlarocha/interactive_carlarocha_thumbnail.jpg",
+        "media": [
+            { "type": "video", "url": "assets/projects/interactive/interactive_carlarocha/interactive_carlarocha_1.mp4" },
+            { "type": "image", "url": "assets/projects/interactive/interactive_carlarocha/interactive_carlarocha_2.jpg" },
+            { "type": "image", "url": "assets/projects/interactive/interactive_carlarocha/interactive_carlarocha_3.jpg" },
+            { "type": "image", "url": "assets/projects/interactive/interactive_carlarocha/interactive_carlarocha_4.jpg" },
+            { "type": "image", "url": "assets/projects/interactive/interactive_carlarocha/interactive_carlarocha_5.jpg" },
+            { "type": "image", "url": "assets/projects/interactive/interactive_carlarocha/interactive_carlarocha_6.jpg" }
+        ]
+    },
+    {
+        "id": "interactive_catolica",
+        "titleKey": "projects.p14.title",
+        "objectiveKey": "projects.p14.objective",
+        "descriptionKey": "projects.p14.description",
+        "title": "Physical Installation",
+        "objective": "Design and produce a physical interactive installation for a brand activation.",
+        "description": "An interactive installation combining electronics, LED strips, sensors and custom software to create a physical-digital experience.",
+        "year": "2024",
+        "categories": ["INTERACTIVE"],
+        "thumbnail": "assets/projects/interactive/interactive_catolica/interactive_catolica_thumbnail.jpg",
+        "media": [
+            { "type": "video", "url": "assets/projects/interactive/interactive_catolica/interactive_catolica_1.mp4" },
+            { "type": "video", "url": "assets/projects/interactive/interactive_catolica/interactive_catolica_2.mp4" },
+            { "type": "image", "url": "assets/projects/interactive/interactive_catolica/interactive_catolica_3.jpg" }
+        ]
+    },
+    {
+        "id": "interactive_race",
+        "titleKey": "projects.p15.title",
+        "objectiveKey": "projects.p15.objective",
+        "descriptionKey": "projects.p15.description",
+        "title": "Product Photography",
+        "objective": "Create a series of studio product shots for a merchandise line.",
+        "description": "Art direction and post-production for a product photography campaign, combining 3D renders with practical photography.",
+        "year": "2023",
+        "categories": ["INTERACTIVE"],
+        "thumbnail": "assets/projects/interactive/interactive_race/interactive_race_thumbnail.jpg",
+        "media": [
+            { "type": "image", "url": "assets/projects/interactive/interactive_race/interactive_race_1.jpeg" },
+            { "type": "image", "url": "assets/projects/interactive/interactive_race/interactive_race_2.jpeg" },
+            { "type": "video", "url": "assets/projects/interactive/interactive_race/interactive_race_3.mp4" }
+        ]
+    },
+    {
+        "id": "motion_apdc",
+        "titleKey": "projects.p16.title",
+        "objectiveKey": "projects.p16.objective",
+        "descriptionKey": "projects.p16.description",
+        "title": "Logo Collection",
+        "objective": "Develop a collection of logos for various brands and projects.",
+        "description": "A curated selection of logo designs spanning different industries and styles, from minimalist wordmarks to geometric symbols.",
+        "year": "2022",
+        "categories": ["MOTION"],
+        "thumbnail": "assets/projects/motion/motion_apdc/motion_apdc_thumbnail.jpg",
+        "media": [
+            { "type": "video", "url": "assets/projects/motion/motion_apdc/motion_apdc_1.mp4" }
+        ]
+    },
+    {
+        "id": "motion_microsoft",
+        "titleKey": "projects.p17.title",
+        "objectiveKey": "projects.p17.objective",
+        "descriptionKey": "projects.p17.description",
+        "title": "Motion Reel",
+        "objective": "Produce a motion graphics showreel highlighting key animation work.",
+        "description": "A compilation of motion design pieces including title sequences, explainer animations and event openers.",
+        "year": "2024",
+        "categories": ["MOTION"],
+        "thumbnail": "assets/projects/motion/motion_microsoft/motion_microsoft_thumbnail.jpg",
+        "media": [
+            { "type": "video", "url": "assets/projects/motion/motion_microsoft/motion_microsoft_1.mp4" },
+            { "type": "image", "url": "assets/projects/motion/motion_microsoft/motion_microsoft_2.jpg" },
+            { "type": "image", "url": "assets/projects/motion/motion_microsoft/motion_microsoft_3.jpg" },
+            { "type": "image", "url": "assets/projects/motion/motion_microsoft/motion_microsoft_4.jpg" },
+            { "type": "image", "url": "assets/projects/motion/motion_microsoft/motion_microsoft_5.jpg" },
+            { "type": "image", "url": "assets/projects/motion/motion_microsoft/motion_microsoft_6.jpg" }
+        ]
+    },
+    {
+        "id": "motion_nttdata",
+        "titleKey": "projects.p18.title",
+        "objectiveKey": "projects.p18.objective",
+        "descriptionKey": "projects.p18.description",
+        "title": "App Screens Showcase",
+        "objective": "Design and present high-fidelity mobile app screens for a client pitch.",
+        "description": "Polished mobile app screen mockups showcasing key user flows, visual language and interaction patterns for a fintech application.",
+        "year": "2025",
+        "categories": ["MOTION"],
+        "thumbnail": "assets/projects/motion/motion_nttdata/motion_nttdata_thumbnail.jpg",
+        "media": [
+            { "type": "video", "url": "assets/projects/motion/motion_nttdata/motion_nttdata_1.mp4" }
+        ]
+    }
+]

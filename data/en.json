@@ -1,0 +1,128 @@
+{
+    "header": {
+        "contact": "SAY HELLO"
+    },
+    "menu": {
+        "about": "How am I?",
+        "portfolio": "What I've done.",
+        "previous": "Previous",
+        "next": "Next"
+    },
+    "home": {
+        "headline_part1": "The bridge between",
+        "headline_part2": "Visual Design",
+        "headline_part3": "and",
+        "headline_part4": "Creative Engineering.",
+        "featured_label": "CHECK ONE OF MY WORKS",
+        "featured_alt": "Featured project"
+    },
+    "about": {
+        "intro_part1": "I'm Diogo Conde, a ",
+        "intro_bold": "Creative Technologist",
+        "intro_part2": " at the intersection of design and code. I craft aesthetics down to the millimeter and bring them to life through technology, whether on a screen, a virtual stage, or a physical installation.",
+        "timeline_origin": "THE ORIGIN",
+        "timeline_direction": "CREATIVE & TECHNICAL DIRECTION",
+        "timeline_explorer": "THE EXPLORER SIDE",
+        "col1": "My entire professional life has been linked to graphic and digital design. It's an old passion—ever since I was a child watching cartoons, I knew exactly what I wanted to do. Today, I turn that imagination into reality through Design, Animation and Visual Effects.",
+        "col2": "In my last role, I worked as a Creative and Technical Director, taking responsibility for all 3D virtual production in the events and advertising sectors, as well as content creation and event planning. My role went far beyond visual execution, it involved designing immersive environments, creating animations and visual effects.",
+        "col3": "I consider myself an eternally curious mind and a chronic self-taught learner, always on the lookout for new technologies. This need to explore led me to test Artificial Intelligence tools, develop applications for various platforms, and dive into electronics. I love getting my hands dirty programming, creating immersive interactive installations that bridge the physical and digital worlds."
+    },
+    "project": {
+        "back": "Back"
+    },
+    "footer": {
+        "text": "All Rights Reserved DIO 2026"
+    },
+    "projects": {
+        "p1": {
+            "title": "APDC Stage Design",
+            "objective": "Design and produce a complete virtual stage for a large-scale business congress.",
+            "description": "Full 3D stage design and real-time visual production for a major international business congress, including LED content, motion graphics and live camera integration."
+        },
+        "p2": {
+            "title": "Bed Design and Visualization",
+            "objective": "Create a magical, immersive circus-themed environment for a seasonal event.",
+            "description": "3D visualization and environmental design for an interactive Christmas event, combining projection mapping, scenic design and animated content."
+        },
+        "p3": {
+            "title": "NOS Stage Design",
+            "objective": "Produce photorealistic 3D renders for an interior design project.",
+            "description": "Architectural visualization for a luxury hotel room, focusing on lighting, materials, and spatial composition."
+        },
+        "p4": {
+            "title": "NTT Data Stage Design",
+            "objective": "Develop the visual identity and environmental graphics for a corporate event.",
+            "description": "Complete brand design including signage, badges, stage graphics, and motion pieces for a large corporate gathering."
+        },
+        "p5": {
+            "title": "Toji SPA Visualization",
+            "objective": "Design the complete visual environment for the 34th edition of a major business congress.",
+            "description": "End-to-end creative direction for a recurring annual event including stage design, LED content creation and real-time visual effects."
+        },
+        "p6": {
+            "title": "APDC Content Production",
+            "objective": "Build an interactive quiz system for a live audience at a corporate event.",
+            "description": "Real-time interactive quiz experience for event attendees using custom software, audience participation mechanics and dynamic on-screen results."
+        },
+        "p7": {
+            "title": "Microsoft Content Production",
+            "objective": "Create a comprehensive brand identity system for a technology company.",
+            "description": "Full brand identity development including logo, typography, color system, stationery and digital asset templates."
+        },
+        "p8": {
+            "title": "NTT Data Content Production",
+            "objective": "Design the visual identity and stage for an executive-level corporate meeting.",
+            "description": "Premium event design including ambient lighting, branded video content and a minimalist stage setup for C-suite presentations."
+        },
+        "p9": {
+            "title": "Mobile App UI/UX",
+            "objective": "Design the user interface and experience for a mobile application.",
+            "description": "Complete UI/UX design for a cross-platform mobile app, including user flows, wireframes, high-fidelity prototypes and a design system."
+        },
+        "p10": {
+            "title": "Product 3D Rendering",
+            "objective": "Create photorealistic product renders for marketing and e-commerce use.",
+            "description": "High-quality 3D product rendering with realistic materials, studio lighting and post-production for catalog and social media assets."
+        },
+        "p11": {
+            "title": "Immersive Stage",
+            "objective": "Create a 360-degree immersive stage experience using projection mapping.",
+            "description": "Design and technical production of an immersive projection-mapped stage environment for a live music event."
+        },
+        "p12": {
+            "title": "Bedroom Visualization",
+            "objective": "Create a photorealistic interior render for a residential project.",
+            "description": "Detailed 3D visualization of a luxury bedroom concept featuring custom furniture, mood lighting and material studies."
+        },
+        "p13": {
+            "title": "Web Platform Design",
+            "objective": "Design the user interface for a web-based SaaS platform.",
+            "description": "UI/UX design and prototyping for a professional web platform including dashboard, onboarding flow and component library."
+        },
+        "p14": {
+            "title": "Physical Installation",
+            "objective": "Design and produce a physical interactive installation for a brand activation.",
+            "description": "An interactive installation combining electronics, LED strips, sensors and custom software to create a physical-digital experience."
+        },
+        "p15": {
+            "title": "Product Photography",
+            "objective": "Create a series of studio product shots for a merchandise line.",
+            "description": "Art direction and post-production for a product photography campaign, combining 3D renders with practical photography."
+        },
+        "p16": {
+            "title": "Logo Collection",
+            "objective": "Develop a collection of logos for various brands and projects.",
+            "description": "A curated selection of logo designs spanning different industries and styles, from minimalist wordmarks to geometric symbols."
+        },
+        "p17": {
+            "title": "Motion Reel",
+            "objective": "Produce a motion graphics showreel highlighting key animation work.",
+            "description": "A compilation of motion design pieces including title sequences, explainer animations and event openers."
+        },
+        "p18": {
+            "title": "App Screens Showcase",
+            "objective": "Design and present high-fidelity mobile app screens for a client pitch.",
+            "description": "Polished mobile app screen mockups showcasing key user flows, visual language and interaction patterns for a fintech application."
+        }
+    }
+}

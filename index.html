@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIO - Creative Technologist Portfolio</title>
+    <meta name="description" content="Diogo Conde – The bridge between Visual Design and Creative Engineering. Portfolio showcasing 3D visualization, motion, interactive installations, UI/UX and design work.">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;700&family=Ubuntu+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Page container: each "page" is a section that gets shown/hidden -->
+    <div id="app"></div>
+
+    <!-- Floating Menu (shared across pages, animated position) -->
+    <nav id="floating-menu" class="floating-menu" data-position="home">
+        <a href="#about" class="menu-item main-link" id="menu-about" data-i18n="menu.about">How am I?</a>
+        <a href="#portfolio" class="menu-item main-link" id="menu-portfolio" data-i18n="menu.portfolio">What I've done.</a>
+        <a href="#" class="menu-item project-link" id="menu-prev" style="display:none;" data-i18n="menu.previous">Previous</a>
+    </nav>
+
+    <!-- Secondary Floating Menu for Next Project (hidden by default) -->
+    <nav id="floating-menu-next" class="floating-menu" data-position="hidden">
+        <a href="#" class="menu-item project-link" id="menu-next" data-i18n="menu.next">Next</a>
+    </nav>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
