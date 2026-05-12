@@ -1,0 +1,60 @@
+3D Viz
+    APDC Stage Design
+        2025
+    Wood Bed Design and Visualization
+        2025
+        Neste projeto foi pedido o design de uma cama queen-size e duas mesas de cabeceira em contraplacado de bétula (birch plywood) para a "Layers", com o objetivo de ser a peça central da nova marca. Direcionado a jovens casais, o desafio exigiu a criação de um móvel moderno e funcional, com as arestas da madeira obrigatoriamente visíveis, permitindo opções de arrumação e detalhes em Fórmica colorida. Um requisito crucial e distintivo foi a integração obrigatória do logótipo da marca diretamente no próprio design da cama.
+        Desenvolvi uma peça que funde a geometria de uma base flutuante com a suavidade de uma cabeceira de silhueta arredondada. O design utiliza uma linguagem de materiais consistente em contraplacado de bétula e Fórmica branca, equilibrando a leveza estrutural com o conforto visual. O resultado é uma proposta expressiva e equilibrada que reflete o espírito inovador da marca, unindo modernidade e funcionalidade numa estética "limpa" e sofisticada.
+    NOS Stage Design
+        2024
+    NTT Data Stage Design
+        2025
+    Toji SPA Visualization
+        2025
+        Neste projeto foi pedido o design e a renderização 3D de uma sala privada para o "Toji", um spa e balneário de luxo sediado em São Francisco. O desafio consistiu em projetar um espaço (de 20x20 pés) direcionado a um público de alto padrão, combinando a estética minimalista e moderna da arquitetura balinesa e japonesa, com destaque para o uso de cimento polido e elementos em madeira. O layout teria de ser altamente funcional e promover a interação social, integrando num único ambiente várias zonas de relaxamento — jacuzzi, piscina tépida, sauna, tanque de água fria, áreas de duche e lounge —, tirando partido de tetos altos e de luz natural proveniente de claraboias.
+        Como solução, foi desenvolvido o design 3D e o layout completo para uma sala privada do spa "Toji", respeitando rigorosamente a área de 20x20 pés. O conceito funde o minimalismo luxuoso com influências balinesas e japonesas, utilizando texturas de cimento polido e ripados de madeira. O projeto foi iterativo, incorporando feedbacks específicos do cliente, como a inclusão de luzes subtis dentro das piscinas e o ajuste criativo da televisão em modo vertical para se assemelhar a arte estática. Para além das visualizações padrão, foi fornecida uma vista panorâmica 360º para uma imersão total no espaço. O pacote final de entrega excedeu as expectativas ao incluir 24 renderizações detalhadas (12 diurnas e 12 noturnas), demonstrando a versatilidade da iluminação, acompanhadas por uma planta baixa 2D à escala com todas as medições.
+
+Motion
+    APDC Content Production
+        2025
+    Microsoft Content Production
+        2022
+    NTT Data Content Production
+        2025
+
+Interactive
+    Carla Rocha Interactive Videomapping
+    Católica Interactive Lights
+    Immersive Race Game
+
+Digital UI/UX
+    Benzo App Design
+        2024
+        Neste projeto foi pedido o design de interface (UI/UX) para a "Benzo Buddy", uma app criada para apoiar utilizadores no desmame de benzodiazepinas. O desafio consistiu em desenhar uma plataforma completa — com plano de medicação, registo de sintomas, comunidade e recursos educativos —, mas mantendo um visual minimalista e cores calmantes para evitar sobrecarregar os utilizadores. O centro da experiência é a mascote interativa "Buddy", que oferece apoio emocional e personalizado. A navegação foi estruturada com uma barra inferior simples e um scroll vertical por ecrãs inteiros, garantindo uma utilização intuitiva, limpa e empática.
+        O projeto arrancou com a criação do "Buddy": um carismático castor em 3D. A escolha deste animal (o "construtor da natureza") serve como metáfora para a reconstrução pessoal do utilizador, enquanto o formato 3D garante interações fluidas e empáticas. Em torno da mascote, foi desenvolvida uma interface calma, minimalista e acessível. Com uma navegação intuitiva e foco no lado humano, o design transmite segurança, clareza e o apoio emocional necessário para esta fase de vulnerabilidade.
+    Cowboy Ducky App Design
+        2024
+        Neste projeto foi pedido o design de interface (UI/UX) e a criação de uma personagem original para uma mini-app de jogo integrada no Telegram. O desafio consistiu em desenvolver uma mascote cativante — que ditaria o nome da própria aplicação —, criar a sua animação de movimento e desenhar o ecrã principal com um estilo moderno e simples, focado numa paleta de tons azuis. A dinâmica do jogo baseia-se numa mecânica de tap-to-earn, em que os toques no ecrã fazem a personagem agir e acumular pontos, evoluindo o seu aspeto visual (através de novas skins) ao longo de 25 níveis de progressão.
+        Como solução, foi criada uma personagem 3D carismática e personalizável — um "pato gordinho" —, acompanhada de uma interface moderna em tons de azul, com versões Light e Dark. A nível de UX, a velocidade das animações aumenta de acordo com a interação do utilizador, tornando a mecânica do jogo mais fluida e envolvente. O projeto expandiu-se além da app, englobando também o design do logótipo oficial e a criação de 5 composições visuais preparadas para publicações nas redes sociais. A entrega técnica incluiu spritesheets e um protótipo interativo e funcional em TouchDesigner, permitindo testar a dinâmica real do jogo antes do seu desenvolvimento.
+    Omni App Design
+        2024
+        Neste projeto foi pedido o design de interface para a "Omni", uma app gamificada de chatbot (IA) que permite aos utilizadores viajar no tempo e no espaço através de "Journeys". O desafio consistiu em criar os ecrãs principais (Login, Home e Chat) com uma estética mística inspirada na cultura islâmica antiga e na figura dos génios (Djinns). A complexa interface de chat teria de suportar imagens geradas e um modo cooperativo por turnos, sendo também exigida a criação de uma loja com um sistema criativo e amigável de compra de tokens focado em "agradar ao génio".
+        Desenvolvi uma interface focada num público jovem, combinando um estilo 3D moderno e glassmorphism com elementos da cultura islâmica. O projeto incluiu o design da mascote "Omni", concebida como um génio amigável e sofisticado. A experiência de utilização (UX) foi cuidadosamente planeada: o formulário de criação de jornadas evita a desordem visual ao utilizar scrolls (vertical e horizontal) em vez de pop-ups nativos, e o chat integra um sistema de cores claro para distinguir o bot, o utilizador e os amigos, reservando o topo do ecrã para as imagens geradas. Para a loja, o desafio da gamificação foi resolvido de forma lúdica e segura: a compra de tokens foi transformada em "gomas em formato de osso", um conceito divertido para dar energia e agradar ao génio.
+    Romanovska Law Website Design
+        2024
+        Neste projeto foi pedido o redesign da página inicial (homepage) para a "Romanov Law", um escritório de advocacia especializado em casos de divórcio. O desafio consistiu em criar um layout visualmente superior ao da concorrência e fortemente focado na conversão. O principal objetivo foi desenhar uma interface intuitiva que destacasse de imediato as áreas de atuação e otimizasse a navegação, tornando o processo de agendamento de consultas o mais simples, acessível e convidativo possível para o cliente.
+        Desenvolvi uma interface elegante e moderna, com destaque para uma ilustração minimalista no topo (um casal em separação) que comunica imediatamente a área de atuação. A informação foi estruturada para leitura rápida através de ícones, integrando a fotografia da advogada para transmitir confiança e proximidade. Mais do que um layout estático, foi desenvolvido um protótipo em vídeo com animações fluidas, demonstrando na prática como o design capta a atenção e guia o utilizador de forma intuitiva para o agendamento de consultas.
+
+Design
+    B to BEE Brand Design
+        2020
+        Neste projeto foi pedido o desenvolvimento do logótipo para a ONG "B to Bee", focada em conectar o mundo corporativo a agricultores e apicultores locais. O desafio consistiu em criar uma identidade visual profissional e orgânica, que representasse a união destes dois universos.
+        Criei uma representação abstrata de uma abelha que traduz visualmente a união dos dois universos: o verde simboliza a natureza e os agricultores, enquanto o azul representa o profissionalismo corporativo. As linhas do design reforçam a mensagem de sustentabilidade e conexão, acompanhadas por uma tipografia simples e moderna. O resultado é um logótipo limpo, dinâmico e altamente versátil, com adaptações para formatos horizontal e vertical.
+    Organoleve Label Design
+        2020
+        Neste projeto foi pedido o desenvolvimento do rótulo para o "ORGANOLEVE", um chá de emagrecimento 100% natural da marca Organofoods, direcionado ao mercado de classe média e alta no Brasil. O desafio consistiu em criar uma embalagem com uma forte estética vintage e sofisticada, desenhada para despertar o desejo imediato do consumidor apenas pelo visual, posicionando o produto como uma solução natural de excelência e exclusividade.
+        Desenvolvi um design leve e orgânico que captura perfeitamente a estética retro e sofisticada pretendida. A paleta de cores foi escolhida para criar um contraste forte, destacando o nome do produto com grande impacto visual. O layout foi pensado de forma funcional e clara — evidenciando rapidamente a função de emagrecimento do chá e dando forte destaque ao logótipo da marca. O resultado é um rótulo altamente apelativo, dinâmico e versátil, preparado para ser facilmente adaptado a outros suportes, como etiquetas ou merchandising.
+    Simple Classroom Logo Design
+        2020
+        Neste projeto foi pedido o desenvolvimento do logótipo para a "Simple Classroom", uma plataforma de software educacional desenhada para manter alunos e professores conectados e envolvidos, tanto em ambientes físicos como virtuais. O desafio consistiu em criar uma identidade visual para o setor tecnológico que transmitisse a robustez e funcionalidade de ferramentas como o Google Classroom, Zoom e Slack, mas com uma abordagem notavelmente mais humana, acessível e divertida.
+        Desenhei um logótipo focado nos conceitos de humanidade, diversão e conexão. Através de formas geométricas amigáveis e de uma tipografia acolhedora, o design equilibra o profissionalismo com um estilo moderno e jovem, pensado para cativar tanto professores como alunos. Um detalhe central desta identidade é a união das letras no logótipo, que reforça visualmente a ligação entre os utilizadores da plataforma. O resultado é uma marca versátil, desenhada primariamente no formato horizontal (típico de software), mas que funciona de forma igualmente eficaz reduzida apenas ao seu ícone.
