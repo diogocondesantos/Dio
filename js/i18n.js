@@ -9,7 +9,17 @@ const listeners = [];
 export async function initI18n() {
     // Try to restore saved language preference
     const saved = localStorage.getItem('dio-lang');
-    if (saved) currentLang = saved;
+    if (saved) {
+        currentLang = saved;
+    } else {
+        // Automatically detect language based on browser preference
+        const browserLang = navigator.language || navigator.userLanguage;
+        if (browserLang && browserLang.startsWith('pt')) {
+            currentLang = 'pt';
+        } else {
+            currentLang = 'en';
+        }
+    }
 
     await loadTranslations(currentLang);
     updateDOM();

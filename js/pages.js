@@ -35,7 +35,12 @@ function renderFooter(variant = 'default') {
     return `
     <div class="${containerClass}">
         <div class="footer">
-            <span class="footer-text" data-i18n="footer.text">All Rights Reserved DIO 2026</span>
+            <span class="footer-text" data-i18n="footer.text">Developed and Designed by Diogo Santos</span>
+            <div class="footer-sitemap">
+                <a href="#home" class="footer-nav-link" data-i18n="footer.home">Homepage</a>
+                <a href="#about" class="footer-nav-link" data-i18n="footer.about">About me</a>
+                <a href="#portfolio" class="footer-nav-link" data-i18n="footer.portfolio">Portfolio</a>
+            </div>
             <div class="language-toggle">
                 <button class="lang-btn" data-lang="pt">PT</button>
                 <button class="lang-btn" data-lang="en">EN</button>
@@ -67,7 +72,6 @@ export function renderHomePage() {
                 <a href="#project/${featured.id}" class="home-featured-image" data-title="${title}">
                     <img src="${featuredImg}" alt="${t('home.featured_alt')}">
                 </a>` : ''}
-                <span class="home-featured-label" data-i18n="home.featured_label">CHECK ONE OF MY WORKS</span>
             </div>
         </div>
         ${renderFooter()}
@@ -226,7 +230,7 @@ export function renderPortfolioPage() {
                 ${CATEGORIES.map((cat, i) => `
                     <div class="filter-item">
                         <button class="filter-btn ${cat === savedCategory ? 'active' : ''}" data-category="${cat}">
-                            <span class="filter-text">${cat}</span>
+                            <span class="filter-text">${t('categories.' + cat)}</span>
                         </button>
                     </div>
                 `).join('')}
@@ -422,6 +426,8 @@ export function renderProjectPage(projectId) {
     const objective = t(project.objectiveKey) || project.objective || '';
     const description = t(project.descriptionKey) || project.description || '';
     const media = [...(project.media || [])].sort((a, b) => a.url.localeCompare(b.url, undefined, { numeric: true, sensitivity: 'base' }));
+    const isSingleCol = project.mediaLayout === 'single';
+    const mediaClass = isSingleCol ? 'project-media project-media--single' : 'project-media';
 
     return `
     <div class="page page-project">
@@ -431,7 +437,7 @@ export function renderProjectPage(projectId) {
                 ${CATEGORIES.map(cat => `
                     <div class="filter-item">
                         <button class="filter-btn ${project.categories && project.categories.includes(cat) ? 'active' : ''}" data-category="${cat}">
-                            <span class="filter-text">${cat}</span>
+                            <span class="filter-text">${t('categories.' + cat)}</span>
                         </button>
                     </div>
                 `).join('')}
@@ -447,19 +453,36 @@ export function renderProjectPage(projectId) {
                 </a>
                 <div class="project-title-section">
                     <h2>${title}</h2>
-                    <span class="project-year">${year}</span>
+                    <span class="project-year">
+                        <svg class="calendar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                            <line x1="16" y1="2" x2="16" y2="6"></line>
+                            <line x1="8" y1="2" x2="8" y2="6"></line>
+                            <line x1="3" y1="10" x2="21" y2="10"></line>
+                        </svg>
+                        ${year}
+                    </span>
                 </div>
                 <div class="project-objective">
+                    <h3 class="project-sidebar-title" data-i18n="project.objective">Objective</h3>
                     <p>${objective}</p>
                 </div>
                 <div class="project-description">
-                    <p>${description}</p>
+                    <h3 class="project-sidebar-title" data-i18n="project.description">Description</h3>
+                    <p class="description-html">${description}</p>
                 </div>
             </div>
-            <div class="project-media">
+            <div class="${mediaClass}">
                 ${media.map(item => {
                     const ext = item.url.split('.').pop().toLowerCase();
                     const isVideo = ['mp4', 'webm', 'ogg', 'mov'].includes(ext);
+                    if (item.type === '360') {
+                        return `<div class="project-media-item project-media-item--360" data-src360="${item.url}">
+                            <div class="viewer360-container" id="viewer360">
+                                <div class="viewer360-hint">↔ Drag to explore 360°</div>
+                            </div>
+                        </div>`;
+                    }
                     if (isVideo) {
                         return `<div class="project-media-item"><video src="${item.url}" controls controlsList="nodownload"></video></div>`;
                     }
@@ -477,6 +500,16 @@ export function renderProjectPage(projectId) {
 }
 
 export function postRenderProject() {
+    // Description HTML is already rendered properly by the template literal.
+
+    // Init Three.js 360° viewer if present
+    const viewer360El = document.getElementById('viewer360');
+    if (viewer360El) {
+        const src = viewer360El.closest('[data-src360]')?.dataset.src360;
+        if (src) init360Viewer(viewer360El, src);
+    }
+
+
     const filterBtns = document.querySelectorAll('.page-project .filter-btn');
     filterBtns.forEach(btn => {
         btn.addEventListener('click', () => {
@@ -535,5 +568,120 @@ export function postRenderProject() {
             popup.classList.add('active');
             document.body.style.overflow = 'hidden';
         });
+    });
+}
+
+// ===================================================
+// THREE.JS 360° PANORAMA VIEWER
+// ===================================================
+function init360Viewer(container, imageSrc) {
+    // Dynamically load Three.js from CDN if not already loaded
+    function loadScript(src, callback) {
+        if (document.querySelector(`script[src="${src}"]`)) { callback(); return; }
+        const s = document.createElement('script');
+        s.src = src;
+        s.onload = callback;
+        document.head.appendChild(s);
+    }
+
+    loadScript('https://cdn.jsdelivr.net/npm/three@0.160.1/build/three.min.js', () => {
+        const THREE = window.THREE;
+        const width = container.clientWidth;
+        const height = container.clientHeight;
+
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(75, width / height, 0.1, 1000);
+        camera.position.set(0, 0, 0.001);
+
+        const renderer = new THREE.WebGLRenderer({ antialias: true });
+        renderer.setPixelRatio(window.devicePixelRatio);
+        renderer.setSize(width, height);
+        container.appendChild(renderer.domElement);
+
+        // Sphere geometry for equirectangular panorama
+        const geometry = new THREE.SphereGeometry(500, 60, 40);
+        geometry.scale(-1, 1, 1); // Invert so texture faces inward
+        const texture = new THREE.TextureLoader().load(imageSrc);
+        const material = new THREE.MeshBasicMaterial({ map: texture });
+        scene.add(new THREE.Mesh(geometry, material));
+
+        // Drag interaction state
+        let isDragging = false;
+        let previousMouse = { x: 0, y: 0 };
+        let lon = 0, lat = 0;
+        let targetLon = 0, targetLat = 0;
+
+        const el = renderer.domElement;
+
+        el.addEventListener('mousedown', e => {
+            isDragging = true;
+            previousMouse = { x: e.clientX, y: e.clientY };
+        });
+        window.addEventListener('mouseup', () => { isDragging = false; });
+        window.addEventListener('mousemove', e => {
+            if (!isDragging) return;
+            targetLon -= (e.clientX - previousMouse.x) * 0.2;
+            targetLat += (e.clientY - previousMouse.y) * 0.1;
+            previousMouse = { x: e.clientX, y: e.clientY };
+        });
+
+        // Touch support
+        let lastTouch = null;
+        el.addEventListener('touchstart', e => { lastTouch = e.touches[0]; });
+        el.addEventListener('touchmove', e => {
+            if (!lastTouch) return;
+            e.preventDefault();
+            const t = e.touches[0];
+            targetLon -= (t.clientX - lastTouch.clientX) * 0.3;
+            targetLat += (t.clientY - lastTouch.clientY) * 0.15;
+            lastTouch = t;
+        }, { passive: false });
+        el.addEventListener('touchend', () => { lastTouch = null; });
+
+        // Hint fade out
+        const hint = container.querySelector('.viewer360-hint');
+        if (hint) setTimeout(() => { hint.style.opacity = '0'; }, 2500);
+
+        // Auto-rotation speed (degrees per frame) — always active
+        const AUTO_ROTATE_SPEED = 0.04;
+
+        let animId;
+        function animate() {
+            animId = requestAnimationFrame(animate);
+
+            // Always auto-rotate — drag input adds on top of this
+            targetLon += AUTO_ROTATE_SPEED;
+
+            // Smooth interpolation
+            lon += (targetLon - lon) * 0.06;
+            lat += (targetLat - lat) * 0.06;
+            lat = Math.max(-85, Math.min(85, lat));
+            const phi = THREE.MathUtils.degToRad(90 - lat);
+            const theta = THREE.MathUtils.degToRad(lon);
+            camera.lookAt(
+                500 * Math.sin(phi) * Math.cos(theta),
+                500 * Math.cos(phi),
+                500 * Math.sin(phi) * Math.sin(theta)
+            );
+            renderer.render(scene, camera);
+        }
+        animate();
+
+        // Resize handler
+        const resizeObs = new ResizeObserver(() => {
+            const w = container.clientWidth;
+            const h = container.clientHeight;
+            renderer.setSize(w, h);
+            camera.aspect = w / h;
+            camera.updateProjectionMatrix();
+        });
+        resizeObs.observe(container);
+
+        // Cleanup when navigating away
+        window.addEventListener('hashchange', () => {
+            cancelAnimationFrame(animId);
+            resizeObs.disconnect();
+            renderer.dispose();
+        }, { once: true });
     });
 }

@@ -1,6 +1,14 @@
 {
     "header": {
-        "contact": "DIZER OLÁ"
+        "contact": "CONNECTA-TE"
+    },
+    "categories": {
+        "ALL": "TUDO",
+        "3D VIZ": "VIZ 3D",
+        "MOTION": "MOTION",
+        "INTERACTIVE": "INTERATIVO",
+        "DIGITAL UI/UX": "UI/UX DIGITAL",
+        "DESIGN": "DESIGN"
     },
     "menu": {
         "about": "Quem sou eu?",
@@ -28,101 +36,106 @@
         "col3": "Considero-me uma mente eternamente curiosa e um autodidata crónico, sempre à procura de novas tecnologias. Esta necessidade de explorar levou-me a testar ferramentas de Inteligência Artificial, desenvolver aplicações para diversas plataformas e mergulhar na eletrónica. Adoro sujar as mãos a programar, criando instalações interativas imersivas que ligam o mundo físico ao digital."
     },
     "project": {
-        "back": "Voltar"
+        "back": "Voltar",
+        "objective": "Objetivo",
+        "description": "Descrição"
     },
     "footer": {
-        "text": "Todos os Direitos Reservados DIO 2026"
+        "text": "Desenvolvido e Desenhado por Diogo Santos",
+        "home": "Homepage",
+        "about": "Sobre",
+        "portfolio": "Portfólio"
     },
     "projects": {
         "p1": {
             "title": "APDC Stage Design",
-            "objective": "",
-            "description": ""
+            "objective": "Desenhar e implementar um palco otimizado para o auditório da Culturgest, adequado tanto ao público presencial como à transmissão online (streaming) do congresso anual da APDC.",
+            "description": "Utilizando o Vectorworks Spotlight, criei um ledwall côncavo adaptado à escala do anfiteatro. O destaque central é um túnel de entrada que culmina num recorte circular no ecrã. Integrei duas zonas laterais para painéis de discussão, permitindo alternância dinâmica durante o evento. O design final reflete inovação tecnológica e garante uma forte imersão visual."
         },
         "p2": {
             "title": "Wood Bed Design and Visualization",
-            "objective": "Neste projeto foi pedido o design de uma cama queen-size e duas mesas de cabeceira em contraplacado de bétula (birch plywood) para a \"Layers\", com o objetivo de ser a peça central da nova marca. Direcionado para jovens casais, o desafio exigiu a criação de um móvel moderno e funcional, com as arestas da madeira obrigatoriamente visíveis, permitindo opções de arrumação e detalhes em Fórmica colorida. Um requisito crucial e distintivo foi a integração obrigatória do logótipo da marca diretamente no próprio design da cama.",
-            "description": "Desenvolvi uma peça que funde a geometria de uma base flutuante com a suavidade de uma cabeceira de silhueta arredondada. O design utiliza uma linguagem de materiais consistente em contraplacado de bétula e Fórmica branca, equilibrando a leveza estrutural com o conforto visual. O resultado é uma proposta expressiva e equilibrada que reflete o espírito inovador da marca, unindo modernidade e funcionalidade numa estética \"limpa\" e sofisticada."
+            "objective": "Desenhar uma cama queen-size e mesas de cabeceira em contraplacado para a marca \"Layers\", com um visual moderno e funcional.",
+            "description": "A cama flutuante de bétula e Fórmica branca reflete uma estética moderna, equilibrando leveza, conforto e a identidade de inovação da marca."
         },
         "p3": {
             "title": "NOS Stage Design",
-            "objective": "",
-            "description": ""
+            "objective": "Desenhar um palco impactante sob o tema \"Circo\" para a festa de Natal da NOS, focada na confraternização dos colaboradores de todo o país.",
+            "description": "A cenografia foi ajustada ao conceito com um palco circular, rematado por uma estrutura de ledstrip animada (pixel on pixel) a representar a \"Wheel\" da NOS, que foi integralmente desenvolvida e produzida por mim. Atrás do palco, instalei um ledwall recuado para criar uma sensação de profundidade e destacar os conteúdos que operei ao vivo. Este projeto venceu três Prémios Lusófonos de Criatividade: Ouro (Evento Empresarial), Prata (Evento de Marca) e Bronze (Evento de Grandes Dimensões). Podes ver o vídeo promocional <a href='https://www.instagram.com/p/DEIMWFYM1g5/' target='_blank' rel='noopener' class='description-link'>AQUI</a>."
         },
         "p4": {
             "title": "NTT Data Stage Design",
-            "objective": "",
-            "description": ""
+            "objective": "Desenhar um palco para um evento corporativo interno da NTT Data, adaptado a uma sala de hotel com disposição do público em mesas de jantar.",
+            "description": "Concebi o palco e o projeto de iluminação em total sintonia com a identidade visual do evento. O resultado final materializou-se em imagens 3D fotorrealistas de alta qualidade, integralmente renderizadas no software Blender."
         },
         "p5": {
             "title": "Toji SPA Visualization",
-            "objective": "Neste projeto foi pedido o design e a renderização 3D de uma sala privada para o \"Toji\", um spa e balneário de luxo sediado em São Francisco. O desafio consistiu em projetar um espaço (de 20x20 pés) direcionado para um público de alto padrão, combinando a estética minimalista e moderna da arquitetura balinesa e japonesa, com destaque para o uso de cimento polido e elementos em madeira. O layout teria de ser altamente funcional e promover a interação social, integrando num único ambiente várias zonas de relaxamento — jacuzzi, piscina tépida, sauna, tanque de água fria, áreas de duche e lounge —, tirando partido de tetos altos e de luz natural proveniente de claraboias.",
-            "description": "Como solução, foi desenvolvido o design 3D e o layout completo para uma sala privada do spa \"Toji\", respeitando rigorosamente a área de 20x20 pés. O conceito funde o minimalismo luxuoso com influências balinesas e japonesas, utilizando texturas de cimento polido e ripados de madeira. O projeto foi iterativo, incorporando feedback específico do cliente, como a inclusão de luzes subtis dentro das piscinas e o ajuste criativo da televisão em modo vertical para se assemelhar a arte estática. Para além das visualizações padrão, foi fornecida uma vista panorâmica 360º para uma imersão total no espaço. O pacote final de entrega excedeu as expectativas ao incluir 24 renderizações detalhadas (12 diurnas e 12 noturnas), demonstrando a versatilidade da iluminação, acompanhadas por uma planta baixa 2D à escala com todas as medições."
+            "objective": "Projetar e renderizar uma sala privada num spa de luxo (20x20 pés), fundindo minimalismo japonês com estética balinesa.",
+            "description": "O espaço maximiza a luz natural com cimento polido e ripados de madeira, incluindo sauna, duche e lounge. O projeto entregou 12 renders."
         },
         "p6": {
             "title": "B to BEE Brand Design",
-            "objective": "Neste projeto foi pedido o desenvolvimento do logótipo para a ONG \"B to Bee\", focada em ligar o mundo corporativo a agricultores e apicultores locais. O desafio consistiu em criar uma identidade visual profissional e orgânica, que representasse a união destes dois universos.",
-            "description": "Criei uma representação abstrata de uma abelha que traduz visualmente a união dos dois universos: o verde simboliza a natureza e os agricultores, enquanto o azul representa o profissionalismo corporativo. As linhas do design reforçam a mensagem de sustentabilidade e ligação, acompanhadas por uma tipografia simples e moderna. O resultado é um logótipo limpo, dinâmico e altamente versátil, com adaptações para formatos horizontal e vertical."
+            "objective": "Criar um logótipo que representasse a ligação entre o setor corporativo e produtores/apicultores para uma ONG.",
+            "description": "Desenvolvi uma abelha abstrata e sustentável (verde/azul) de linhas simples, resultando numa identidade versátil e moderna."
         },
         "p7": {
             "title": "Organoleve Label Design",
-            "objective": "Neste projeto foi pedido o desenvolvimento do rótulo para o \"ORGANOLEVE\", um chá de emagrecimento 100% natural da marca Organofoods, direcionado para o mercado de classe média e alta no Brasil. O desafio consistiu em criar uma embalagem com uma forte estética vintage e sofisticada, desenhada para despertar o desejo imediato do consumidor apenas pelo visual, posicionando o produto como uma solução natural de excelência e exclusividade.",
-            "description": "Desenvolvi um design leve e orgânico que captura perfeitamente a estética retro e sofisticada pretendida. A paleta de cores foi escolhida para criar um contraste forte, destacando o nome do produto com grande impacto visual. O layout foi pensado de forma funcional e clara — evidenciando rapidamente a função de emagrecimento do chá e dando forte destaque ao logótipo da marca. O resultado é um rótulo altamente apelativo, dinâmico e versátil, preparado para ser facilmente adaptado a outros suportes, como etiquetas ou merchandising."
+            "objective": "Desenhar o rótulo para um chá de emagrecimento premium no Brasil com estética vintage e exclusiva.",
+            "description": "Criei um design orgânico com influências retro e cores vibrantes, onde o layout destaca quer o logótipo quer a função do produto."
         },
         "p8": {
             "title": "Simple Classroom Logo Design",
-            "objective": "Neste projeto foi pedido o desenvolvimento do logótipo para a \"Simple Classroom\", uma plataforma de software educacional desenhada para manter alunos e professores ligados e envolvidos, tanto em ambientes físicos como virtuais. O desafio consistiu em criar uma identidade visual para o setor tecnológico que transmitisse a robustez e funcionalidade de ferramentas como o Google Classroom, Zoom e Slack, mas com uma abordagem notavelmente mais humana, acessível e divertida.",
-            "description": "Desenhei um logótipo focado nos conceitos de humanidade, diversão e conexão. Através de formas geométricas amigáveis e de uma tipografia acolhedora, o design equilibra o profissionalismo com um estilo moderno e jovem, pensado para cativar tanto professores como alunos. Um detalhe central desta identidade é a união das letras no logótipo, que reforça visualmente a ligação entre os utilizadores da plataforma. O resultado é uma marca versátil, desenhada primariamente no formato horizontal (típico de software), mas que funciona de forma igualmente eficaz reduzida apenas ao seu ícone."
+            "objective": "Criar um logótipo para um software de educação que fosse simultaneamente altamente fiável e muito acessível/humano.",
+            "description": "Foquei-me na conexão humana através de formas amigáveis e tipografia acolhedora. O ícone criado garante uma elevada adaptabilidade da marca em vários meios."
         },
         "p9": {
             "title": "Benzo App Design",
-            "objective": "Neste projeto foi pedido o design de interface (UI/UX) para a \"Benzo Buddy\", uma app criada para apoiar utilizadores no desmame de benzodiazepinas. O desafio consistiu em desenhar uma plataforma completa — com plano de medicação, registo de sintomas, comunidade e recursos educativos —, mas mantendo um visual minimalista e cores calmantes para evitar sobrecarregar os utilizadores. O centro da experiência é a mascote interativa \"Buddy\", que oferece apoio emocional e personalizado. A navegação foi estruturada com uma barra inferior simples e um scroll vertical por ecrãs inteiros, garantindo uma utilização intuitiva, limpa e empática.",
-            "description": "O projeto arrancou com a criação do \"Buddy\": um carismático castor em 3D. A escolha deste animal (o \"construtor da natureza\") serve como metáfora para a reconstrução pessoal do utilizador, enquanto o formato 3D garante interações fluidas e empáticas. Em torno da mascote, foi desenvolvida uma interface calma, minimalista e acessível. Com uma navegação intuitiva e foco no lado humano, o design transmite segurança, clareza e o apoio emocional necessário para esta fase de vulnerabilidade."
+            "objective": "Criar o UI/UX da \"Benzo Buddy\", uma app focada no apoio ao desmame de benzodiazepinas com planos, registo de sintomas e apoio emocional.",
+            "description": "Desenvolvi uma interface minimalista, segura e empática, centrada na mascote 3D \"Buddy\", oferecendo uma navegação clara e calmante a utilizadores vulneráveis."
         },
         "p10": {
             "title": "Cowboy Ducky App Design",
-            "objective": "Neste projeto foi pedido o design de interface (UI/UX) e a criação de uma personagem original para uma mini-app de jogo integrada no Telegram. O desafio consistiu em desenvolver uma mascote cativante — que ditaria o nome da própria aplicação —, criar a sua animação de movimento e desenhar o ecrã principal com um estilo moderno e simples, focado numa paleta de tons azuis. A dinâmica do jogo baseia-se numa mecânica de tap-to-earn, em que os toques no ecrã fazem a personagem agir e acumular pontos, evoluindo o seu aspeto visual (através de novas skins) ao longo de 25 níveis de progressão.",
-            "description": "Como solução, foi criada uma personagem 3D carismática e personalizável — um \"pato gordinho\" —, acompanhada de uma interface moderna em tons de azul, com versões Light e Dark. A nível de UX, a velocidade das animações aumenta de acordo com a interação do utilizador, tornando a mecânica do jogo mais fluida e envolvente. O projeto expandiu-se além da app, englobando também o design do logótipo oficial e a criação de 5 composições visuais preparadas para publicações nas redes sociais. A entrega técnica incluiu spritesheets e um protótipo interativo e funcional em TouchDesigner, permitindo testar a dinâmica real do jogo antes do seu desenvolvimento."
+            "objective": "Projetar o UI/UX e a personagem para uma mini-app tap-to-earn no Telegram, com evolução visual ao longo de 25 níveis.",
+            "description": "A app inclui modos Light e Dark, logótipo, redes sociais e um protótipo em TouchDesigner, garantindo fluidez e diversão centradas num \"pato gordinho\" em 3D."
         },
         "p11": {
             "title": "Omni App Design",
-            "objective": "Neste projeto foi pedido o design de interface para a \"Omni\", uma app gamificada de chatbot (IA) que permite aos utilizadores viajar no tempo e no espaço através de \"Journeys\". O desafio consistiu em criar os ecrãs principais (Login, Home e Chat) com uma estética mística inspirada na cultura islâmica antiga e na figura dos génios (Djinns). A complexa interface de chat teria de suportar imagens geradas e um modo cooperativo por turnos, sendo também exigida a criação de uma loja com um sistema criativo e amigável de compra de tokens focado em \"agradar ao génio\".",
-            "description": "Desenvolvi uma interface focada num público jovem, combinando um estilo 3D moderno e glassmorphism com elementos da cultura islâmica. O projeto incluiu o design da mascote \"Omni\", concebida como um génio amigável e sofisticado. A experiência de utilização (UX) foi cuidadosamente planeada: o formulário de criação de jornadas evita a desordem visual ao utilizar scrolls (vertical e horizontal) em vez de pop-ups nativos, e o chat integra um sistema de cores claro para distinguir o bot, o utilizador e os amigos, reservando o topo do ecrã para as imagens geradas. Para a loja, o desafio da gamificação foi resolvido de forma lúdica e segura: a compra de tokens foi transformada em \"gomas em formato de osso\", um conceito divertido para dar energia e agradar ao génio."
+            "objective": "Criar a \"Omni\", uma app de chatbot de IA com temática mística, com suporte a imagens, co-op e uma loja de tokens gamificada.",
+            "description": "A experiência de utilizador combina glassmorphism, elementos místicos em 3D e uma loja que converte transações num processo de jogo apelativo."
         },
         "p12": {
             "title": "Romanovska Law Website Design",
-            "objective": "Neste projeto foi pedido o redesign da página inicial (homepage) para a \"Romanov Law\", um escritório de advocacia especializado em casos de divórcio. O desafio consistiu em criar um layout visualmente superior ao da concorrência e fortemente focado na conversão. O principal objetivo foi desenhar uma interface intuitiva que destacasse de imediato as áreas de atuação e otimizasse a navegação, tornando o processo de agendamento de consultas o mais simples, acessível e convidativo possível para o cliente.",
-            "description": "Desenvolvi uma interface elegante e moderna, com destaque para uma ilustração minimalista no topo (um casal em separação) que comunica imediatamente a área de atuação. A informação foi estruturada para leitura rápida através de ícones, integrando a fotografia da advogada para transmitir confiança e proximidade. Mais do que um layout estático, foi desenvolvido um protótipo em vídeo com animações fluidas, demonstrando na prática como o design capta a atenção e guia o utilizador de forma intuitiva para o agendamento de consultas."
+            "objective": "Redesenhar a homepage de uma firma de advogados para aumentar a conversão, destacando clareza e facilidade de agendamento.",
+            "description": "Implementei um layout elegante, apoiado em fotografia, ícones e ilustrações minimalistas que transmitem confiança, finalizado com um protótipo em vídeo."
         },
         "p13": {
             "title": "Carla Rocha Interactive Videomapping",
-            "objective": "",
-            "description": ""
+            "objective": "Conceber um jantar imersivo e interativo para a equipa interna da academia Carla Rocha.",
+            "description": "Desenhei uma experiência visual a 360º numa sala retangular, combinando videomapping com uma mesa de jantar interativa para 20 pessoas. Fui responsável pela criação de todos os conteúdos visuais e pela programação do sistema no TouchDesigner, alimentado por três sensores infravermelhos para deteção de movimento. Este projeto venceu o Grande Prémio APCE na categoria de 'Evento Interno'."
         },
         "p14": {
             "title": "Católica Interactive Lights",
-            "objective": "",
-            "description": ""
+            "objective": "Criar uma instalação de luz interativa com o lettering \"Católica\" para o evento anual de entrega de diplomas.",
+            "description": "Desenvolvi um sistema de visão computacional que capta o movimento das pessoas a passar à frente das letras, gerando um feixe de luz branca que as acompanha em tempo real. Toda a interatividade foi programada no software TouchDesigner."
         },
         "p15": {
             "title": "Immersive Race Game",
-            "objective": "",
-            "description": ""
+            "objective": "Desenvolver uma ativação de marca interativa para um evento ao vivo de uma fabricante automóvel.",
+            "description": "Criei um protótipo de um jogo interativo de corridas automóveis controlado exclusivamente através do movimento das mãos do utilizador. O projeto baseou-se num avançado sistema de rastreamento de movimentos, oferecendo uma experiência imersiva e inovadora ao público."
         },
         "p16": {
             "title": "APDC Content Production",
-            "objective": "",
-            "description": ""
+            "objective": "Produzir o filme de introdução para o congresso anual da APDC.",
+            "description": "Além de ter assinado o stage design e a maquetização audiovisual deste evento, assumi a criação gráfica dos conteúdos de vídeo e a sua operação integral ao vivo, gerindo a emissão através dos media servers Pixera."
         },
         "p17": {
             "title": "Microsoft Content Production",
-            "objective": "",
-            "description": ""
+            "objective": "Produzir a componente visual e técnica de um evento virtual de escala internacional para a Microsoft.",
+            "description": "Desenhei dois palcos digitais em 3D e produzi os conteúdos visuais, alinhando-os com a estética de gala do evento. A par do design, programei toda a componente técnica dos ambientes virtuais e assumi a operação e realização de câmaras durante a emissão ao vivo."
         },
         "p18": {
             "title": "NTT Data Content Production",
-            "objective": "",
-            "description": ""
+            "objective": "Produzir o filme de introdução para o evento corporativo interno da NTT Data.",
+            "description": "Recorrendo a técnicas avançadas e softwares de motion design, criei um vídeo introdutório energético e impactante, desenhado para captar imediatamente a atenção da audiência."
         }
     }
 }
