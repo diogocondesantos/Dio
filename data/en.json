@@ -3,7 +3,7 @@
         "contact": "SAY HELLO"
     },
     "menu": {
-        "about": "How am I?",
+        "about": "Who am I?",
         "portfolio": "What I've done.",
         "previous": "Previous",
         "next": "Next"
@@ -36,93 +36,93 @@
     "projects": {
         "p1": {
             "title": "APDC Stage Design",
-            "objective": "Design and produce a complete virtual stage for a large-scale business congress.",
-            "description": "Full 3D stage design and real-time visual production for a major international business congress, including LED content, motion graphics and live camera integration."
+            "objective": "",
+            "description": ""
         },
         "p2": {
-            "title": "Bed Design and Visualization",
-            "objective": "Create a magical, immersive circus-themed environment for a seasonal event.",
-            "description": "3D visualization and environmental design for an interactive Christmas event, combining projection mapping, scenic design and animated content."
+            "title": "Wood Bed Design and Visualization",
+            "objective": "In this project, I was asked to design a queen-size bed and two bedside tables in birch plywood for \"Layers\", with the goal of being the centerpiece of the new brand. Targeted at young couples, the challenge required the creation of modern and functional furniture, with the wood edges obligatorily visible, allowing storage options and colorful Formica details. A crucial and distinctive requirement was the mandatory integration of the brand's logo directly into the bed design itself.",
+            "description": "I developed a piece that merges the geometry of a floating base with the softness of a rounded-silhouette headboard. The design uses a consistent material language of birch plywood and white Formica, balancing structural lightness with visual comfort. The result is an expressive and balanced proposal that reflects the brand's innovative spirit, uniting modernity and functionality in a clean and sophisticated aesthetic."
         },
         "p3": {
             "title": "NOS Stage Design",
-            "objective": "Produce photorealistic 3D renders for an interior design project.",
-            "description": "Architectural visualization for a luxury hotel room, focusing on lighting, materials, and spatial composition."
+            "objective": "",
+            "description": ""
         },
         "p4": {
             "title": "NTT Data Stage Design",
-            "objective": "Develop the visual identity and environmental graphics for a corporate event.",
-            "description": "Complete brand design including signage, badges, stage graphics, and motion pieces for a large corporate gathering."
+            "objective": "",
+            "description": ""
         },
         "p5": {
             "title": "Toji SPA Visualization",
-            "objective": "Design the complete visual environment for the 34th edition of a major business congress.",
-            "description": "End-to-end creative direction for a recurring annual event including stage design, LED content creation and real-time visual effects."
+            "objective": "In this project, I was asked to design and 3D render a private room for \"Toji\", a luxury spa and bathhouse based in San Francisco. The challenge consisted of designing a space (measuring 20x20 feet) targeted at a high-end public, combining the minimalist and modern aesthetic of Balinese and Japanese architecture, with an emphasis on polished concrete and wooden elements. The layout had to be highly functional and promote social interaction, integrating several relaxation zones into a single environment — jacuzzi, tepid pool, sauna, cold plunge, shower and lounge areas — taking advantage of high ceilings and natural light from skylights.",
+            "description": "As a solution, the 3D design and complete layout for a private room at the \"Toji\" spa was developed, strictly respecting the 20x20 feet area. The concept merges luxurious minimalism with Balinese and Japanese influences, using polished concrete textures and wooden slats. The project was iterative, incorporating specific client feedback, such as the inclusion of subtle lights inside the pools and the creative adjustment of the television in portrait mode to resemble static art. In addition to the standard visualizations, a 360º panoramic view was provided for total immersion in the space. The final delivery package exceeded expectations by including 24 detailed renders (12 daytime and 12 nighttime), demonstrating the versatility of the lighting, accompanied by a 2D floor plan to scale with all measurements."
         },
         "p6": {
-            "title": "APDC Content Production",
-            "objective": "Build an interactive quiz system for a live audience at a corporate event.",
-            "description": "Real-time interactive quiz experience for event attendees using custom software, audience participation mechanics and dynamic on-screen results."
+            "title": "B to BEE Brand Design",
+            "objective": "In this project, I was asked to develop the logo for the NGO \"B to Bee\", focused on connecting the corporate world with local farmers and beekeepers. The challenge consisted of creating a professional and organic visual identity that represented the union of these two universes.",
+            "description": "I created an abstract representation of a bee that visually translates the union of the two universes: green symbolizes nature and farmers, while blue represents corporate professionalism. The design lines reinforce the message of sustainability and connection, accompanied by simple and modern typography. The result is a clean, dynamic, and highly versatile logo, with adaptations for horizontal and vertical formats."
         },
         "p7": {
-            "title": "Microsoft Content Production",
-            "objective": "Create a comprehensive brand identity system for a technology company.",
-            "description": "Full brand identity development including logo, typography, color system, stationery and digital asset templates."
+            "title": "Organoleve Label Design",
+            "objective": "In this project, I was asked to develop the label for \"ORGANOLEVE\", a 100% natural weight-loss tea by the Organofoods brand, targeted at the middle and upper-class market in Brazil. The challenge consisted of creating packaging with a strong vintage and sophisticated aesthetic, designed to trigger immediate consumer desire through its visuals, positioning the product as a natural solution of excellence and exclusivity.",
+            "description": "I developed a light and organic design that perfectly captures the desired retro and sophisticated aesthetic. The color palette was chosen to create a strong contrast, highlighting the product name with great visual impact. The layout was designed in a functional and clear way — quickly highlighting the tea's weight loss function and giving strong prominence to the brand's logo. The result is a highly appealing, dynamic, and versatile label, ready to be easily adapted to other media such as tags or merchandising."
         },
         "p8": {
-            "title": "NTT Data Content Production",
-            "objective": "Design the visual identity and stage for an executive-level corporate meeting.",
-            "description": "Premium event design including ambient lighting, branded video content and a minimalist stage setup for C-suite presentations."
+            "title": "Simple Classroom Logo Design",
+            "objective": "In this project, I was asked to develop the logo for \"Simple Classroom\", an educational software platform designed to keep students and teachers connected and engaged, both in physical and virtual environments. The challenge consisted of creating a visual identity for the tech sector that conveyed the robustness and functionality of tools like Google Classroom, Zoom, and Slack, but with a remarkably more human, accessible, and fun approach.",
+            "description": "I designed a logo focused on the concepts of humanity, fun, and connection. Through friendly geometric shapes and warm typography, the design balances professionalism with a modern and youthful style, designed to captivate both teachers and students. A central detail of this identity is the union of the letters in the logo, which visually reinforces the connection between the platform's users. The result is a versatile brand, designed primarily in a horizontal format (typical for software), but which works equally effectively reduced to just its icon."
         },
         "p9": {
-            "title": "Mobile App UI/UX",
-            "objective": "Design the user interface and experience for a mobile application.",
-            "description": "Complete UI/UX design for a cross-platform mobile app, including user flows, wireframes, high-fidelity prototypes and a design system."
+            "title": "Benzo App Design",
+            "objective": "In this project, I was asked to design the user interface (UI/UX) for \"Benzo Buddy\", an app created to support users in tapering off benzodiazepines. The challenge consisted of designing a complete platform — with a medication plan, symptom log, community, and educational resources —, while maintaining a minimalist design and calming colors to avoid overwhelming users. At the center of the experience is the interactive mascot \"Buddy\", who offers emotional and personalized support. The navigation was structured with a simple bottom bar and a vertical scroll through full screens, ensuring intuitive, clean, and empathetic use.",
+            "description": "The project started with the creation of \"Buddy\": a charismatic 3D beaver. The choice of this animal (the \"nature's builder\") serves as a metaphor for the user's personal reconstruction, while the 3D format ensures fluid and empathetic interactions. Around the mascot, a calm, minimalist, and accessible interface was developed. With intuitive navigation and a focus on the human side, the design conveys safety, clarity, and the emotional support needed during this vulnerable phase."
         },
         "p10": {
-            "title": "Product 3D Rendering",
-            "objective": "Create photorealistic product renders for marketing and e-commerce use.",
-            "description": "High-quality 3D product rendering with realistic materials, studio lighting and post-production for catalog and social media assets."
+            "title": "Cowboy Ducky App Design",
+            "objective": "In this project, I was asked to design the interface (UI/UX) and create an original character for a mini-game app integrated into Telegram. The challenge consisted of developing a captivating mascot — which would dictate the name of the application itself —, creating its movement animation, and designing the main screen with a modern and simple style, focused on a blue-toned palette. The game dynamics are based on a tap-to-earn mechanic, where taps on the screen trigger the character's actions and accumulate points, evolving its visual appearance (through new skins) across 25 progression levels.",
+            "description": "As a solution, a charismatic and customizable 3D character — a \"chubby duck\" — was created, accompanied by a modern interface in blue tones with Light and Dark versions. At the UX level, the animation speed increases according to the user's interaction, making the game mechanics more fluid and engaging. The project expanded beyond the app, also encompassing the design of the official logo and the creation of 5 visual compositions prepared for social media posts. The technical delivery included spritesheets and an interactive and functional prototype in TouchDesigner, allowing the testing of the game's actual dynamics before development."
         },
         "p11": {
-            "title": "Immersive Stage",
-            "objective": "Create a 360-degree immersive stage experience using projection mapping.",
-            "description": "Design and technical production of an immersive projection-mapped stage environment for a live music event."
+            "title": "Omni App Design",
+            "objective": "In this project, I was asked to design the interface for \"Omni\", a gamified AI chatbot app that allows users to travel through time and space via \"Journeys\". The challenge consisted of creating the main screens (Login, Home, and Chat) with a mystical aesthetic inspired by ancient Islamic culture and the figure of genies (Djinns). The complex chat interface had to support generated images and a turn-based cooperative mode, while also requiring the creation of a shop with a creative and friendly token-purchasing system focused on \"pleasing the genie\".",
+            "description": "I developed an interface focused on a young audience, combining a modern 3D style and glassmorphism with elements of Islamic culture. The project included the design of the mascot \"Omni\", conceived as a friendly and sophisticated genie. The user experience (UX) was carefully planned: the journey creation form avoids visual clutter by using scrolls (vertical and horizontal) instead of native pop-ups, and the chat integrates a clear color-coding system to distinguish the bot, the user, and friends, reserving the top of the screen for generated images. For the shop, the gamification challenge was solved in a playful and safe way: buying tokens was transformed into \"bone-shaped gummies\", a fun concept to give energy and please the genie."
         },
         "p12": {
-            "title": "Bedroom Visualization",
-            "objective": "Create a photorealistic interior render for a residential project.",
-            "description": "Detailed 3D visualization of a luxury bedroom concept featuring custom furniture, mood lighting and material studies."
+            "title": "Romanovska Law Website Design",
+            "objective": "In this project, I was asked to redesign the homepage for \"Romanov Law\", a law firm specializing in divorce cases. The challenge consisted of creating a layout visually superior to the competition and heavily focused on conversion. The main objective was to design an intuitive interface that immediately highlighted the areas of practice and optimized navigation, making the consultation scheduling process as simple, accessible, and inviting as possible for the client.",
+            "description": "I developed an elegant and modern interface, featuring a minimalist illustration at the top (a separating couple) that immediately communicates the field of practice. The information was structured for quick reading through icons, integrating the lawyer's photograph to convey trust and proximity. More than just a static layout, a video prototype with fluid animations was developed, demonstrating in practice how the design captures attention and intuitively guides the user to schedule consultations."
         },
         "p13": {
-            "title": "Web Platform Design",
-            "objective": "Design the user interface for a web-based SaaS platform.",
-            "description": "UI/UX design and prototyping for a professional web platform including dashboard, onboarding flow and component library."
+            "title": "Carla Rocha Interactive Videomapping",
+            "objective": "",
+            "description": ""
         },
         "p14": {
-            "title": "Physical Installation",
-            "objective": "Design and produce a physical interactive installation for a brand activation.",
-            "description": "An interactive installation combining electronics, LED strips, sensors and custom software to create a physical-digital experience."
+            "title": "Católica Interactive Lights",
+            "objective": "",
+            "description": ""
         },
         "p15": {
-            "title": "Product Photography",
-            "objective": "Create a series of studio product shots for a merchandise line.",
-            "description": "Art direction and post-production for a product photography campaign, combining 3D renders with practical photography."
+            "title": "Immersive Race Game",
+            "objective": "",
+            "description": ""
         },
         "p16": {
-            "title": "Logo Collection",
-            "objective": "Develop a collection of logos for various brands and projects.",
-            "description": "A curated selection of logo designs spanning different industries and styles, from minimalist wordmarks to geometric symbols."
+            "title": "APDC Content Production",
+            "objective": "",
+            "description": ""
         },
         "p17": {
-            "title": "Motion Reel",
-            "objective": "Produce a motion graphics showreel highlighting key animation work.",
-            "description": "A compilation of motion design pieces including title sequences, explainer animations and event openers."
+            "title": "Microsoft Content Production",
+            "objective": "",
+            "description": ""
         },
         "p18": {
-            "title": "App Screens Showcase",
-            "objective": "Design and present high-fidelity mobile app screens for a client pitch.",
-            "description": "Polished mobile app screen mockups showcasing key user flows, visual language and interaction patterns for a fintech application."
+            "title": "NTT Data Content Production",
+            "objective": "",
+            "description": ""
         }
     }
 }

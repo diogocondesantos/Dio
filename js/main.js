@@ -6,7 +6,7 @@ import { initI18n, setLanguage, onLanguageChange, updateDOM } from './i18n.js';
 import { loadProjectsData } from './data.js';
 import { registerRoute, initRouter } from './router.js';
 import {
-    renderHomePage, postRenderHome,
+    renderHomePage, postRenderHome, destroyHomeCarousel,
     renderAboutPage,
     renderPortfolioPage, postRenderPortfolio,
     renderProjectPage, postRenderProject
@@ -37,8 +37,9 @@ document.addEventListener('DOMContentLoaded', async () => {
         // Post-render hooks
         updateDOM();
 
-        // Clean up magnetic text when leaving home
+        // Clean up magnetic text and home carousel when leaving home
         destroyMagneticText();
+        destroyHomeCarousel();
 
         if (currentRoute === 'home') {
             postRenderHome();

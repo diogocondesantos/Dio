@@ -6,6 +6,9 @@
 import { t, getCurrentLang } from './i18n.js';
 import { getProjects, getProjectById, getProjectsByCategory } from './data.js';
 
+let homeCarouselInterval = null;
+let currentCarouselIndex = 0;
+
 // --- Shared Components ---
 
 function renderHeader(bordered = false) {
@@ -48,6 +51,7 @@ export function renderHomePage() {
     const projects = getProjects();
     const featured = projects.length > 0 ? projects[0] : null;
     const featuredImg = featured ? featured.thumbnail : '';
+    const title = featured ? (t(featured.titleKey) || featured.title) : '';
 
     return `
     <div class="page page-home">
@@ -60,9 +64,8 @@ export function renderHomePage() {
             </div>
             <div class="home-features">
                 ${featuredImg ? `
-                <a href="#project/${featured.id}" class="home-featured-image">
+                <a href="#project/${featured.id}" class="home-featured-image" data-title="${title}">
                     <img src="${featuredImg}" alt="${t('home.featured_alt')}">
-                    <div class="duotone-overlay"></div>
                 </a>` : ''}
                 <span class="home-featured-label" data-i18n="home.featured_label">CHECK ONE OF MY WORKS</span>
             </div>
@@ -80,6 +83,93 @@ export function postRenderHome() {
         const headline3 = t('home.headline_part3');
         const headline4 = t('home.headline_part4');
         copyEl.innerHTML = `<span style="font-weight:200">${headline1}</span><br><strong>${headline2}</strong> <span style="font-weight:200">${headline3}</span><br><strong>${headline4}</strong>`;
+    }
+
+    // Custom cursor title follow interaction for the featured image
+    const homePage = document.querySelector('.page-home');
+    const featuredImage = document.querySelector('.home-featured-image');
+    if (homePage && featuredImage) {
+        // Create tooltip element dynamically inside the page container
+        const tooltip = document.createElement('div');
+        tooltip.className = 'portfolio-cursor-title';
+        homePage.appendChild(tooltip);
+
+        featuredImage.addEventListener('mousemove', (e) => {
+            tooltip.style.transform = `translate3d(${e.clientX + 20}px, ${e.clientY}px, 0) translateY(-50%)`;
+        });
+
+        featuredImage.addEventListener('mouseenter', () => {
+            const title = featuredImage.dataset.title || '';
+            tooltip.textContent = title;
+            tooltip.classList.add('visible');
+        });
+
+        featuredImage.addEventListener('mouseleave', () => {
+            tooltip.classList.remove('visible');
+        });
+
+        // Start the featured projects carousel
+        startHomeCarousel(featuredImage, tooltip);
+    }
+}
+
+function startHomeCarousel(featuredImage, tooltip) {
+    // Clear any existing carousel interval
+    destroyHomeCarousel();
+
+    const projects = getProjects();
+    if (projects.length <= 1) return; // No need to rotate if 0 or 1 project
+
+    // Initialize index at 0 (or match currently displayed featured project)
+    currentCarouselIndex = 0;
+
+    homeCarouselInterval = setInterval(() => {
+        currentCarouselIndex = (currentCarouselIndex + 1) % projects.length;
+        const nextProject = projects[currentCarouselIndex];
+        const nextTitle = t(nextProject.titleKey) || nextProject.title;
+
+        if (window.gsap) {
+            window.gsap.to(featuredImage, {
+                opacity: 0,
+                duration: 0.5,
+                onComplete: () => {
+                    featuredImage.href = `#project/${nextProject.id}`;
+                    featuredImage.dataset.title = nextTitle;
+                    
+                    const img = featuredImage.querySelector('img');
+                    if (img) {
+                        img.src = nextProject.thumbnail;
+                    }
+
+                    if (tooltip && tooltip.classList.contains('visible')) {
+                        tooltip.textContent = nextTitle;
+                    }
+
+                    window.gsap.to(featuredImage, {
+                        opacity: 1,
+                        duration: 0.5
+                    });
+                }
+            });
+        } else {
+            // Fallback if GSAP is not loaded
+            featuredImage.href = `#project/${nextProject.id}`;
+            featuredImage.dataset.title = nextTitle;
+            const img = featuredImage.querySelector('img');
+            if (img) {
+                img.src = nextProject.thumbnail;
+            }
+            if (tooltip && tooltip.classList.contains('visible')) {
+                tooltip.textContent = nextTitle;
+            }
+        }
+    }, 5000); // Every 5 seconds
+}
+
+export function destroyHomeCarousel() {
+    if (homeCarouselInterval) {
+        clearInterval(homeCarouselInterval);
+        homeCarouselInterval = null;
     }
 }
 
@@ -152,12 +242,15 @@ export function renderPortfolioPage() {
 }
 
 function renderProjectThumbnails(projects) {
-    return projects.map(p => `
-        <a href="#project/${p.id}" class="project-thumb" data-categories="${(p.categories || []).join(',')}">
-            <img src="${p.thumbnail}" alt="${t(p.titleKey) || p.title}" loading="lazy">
-            <div class="duotone-overlay"></div>
-        </a>
-    `).join('');
+    return projects.map(p => {
+        const title = t(p.titleKey) || p.title;
+        return `
+            <a href="#project/${p.id}" class="project-thumb" data-title="${title}" data-categories="${(p.categories || []).join(',')}">
+                <img src="${p.thumbnail}" alt="${title}" loading="lazy">
+                <div class="duotone-overlay"></div>
+            </a>
+        `;
+    }).join('');
 }
 
 let portfolioResizeHandler = null;
@@ -246,6 +339,42 @@ export function postRenderPortfolio() {
             }
         });
     });
+
+    // Custom cursor title follow interaction for cards
+    const portfolioPage = document.querySelector('.page-portfolio');
+    if (portfolioPage) {
+        // Create tooltip element dynamically inside the page container
+        const tooltip = document.createElement('div');
+        tooltip.className = 'portfolio-cursor-title';
+        portfolioPage.appendChild(tooltip);
+
+        let activeThumb = null;
+
+        portfolioPage.addEventListener('mousemove', (e) => {
+            tooltip.style.transform = `translate3d(${e.clientX + 20}px, ${e.clientY}px, 0) translateY(-50%)`;
+        });
+
+        portfolioPage.addEventListener('mouseover', (e) => {
+            const thumb = e.target.closest('.project-thumb');
+            if (thumb && thumb !== activeThumb) {
+                activeThumb = thumb;
+                const title = thumb.dataset.title || '';
+                tooltip.textContent = title;
+                tooltip.classList.add('visible');
+            }
+        });
+
+        portfolioPage.addEventListener('mouseout', (e) => {
+            const thumb = e.target.closest('.project-thumb');
+            if (thumb && thumb === activeThumb) {
+                const related = e.relatedTarget;
+                if (!related || !thumb.contains(related)) {
+                    activeThumb = null;
+                    tooltip.classList.remove('visible');
+                }
+            }
+        });
+    }
 }
 
 // --- PROJECT DETAIL PAGE ---
