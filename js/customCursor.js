@@ -2,9 +2,10 @@
 // DIO PORTFOLIO – Custom Cursor with GSAP Lag/Lerp
 // ===================================================
 
-let dot, blurEl;
+let dot, blurEl, blurEl2;
 let xToDot, yToDot;
 let xToBlur, yToBlur;
+let xToBlur2, yToBlur2;
 let initialized = false;
 
 function onMouseMove(e) {
@@ -14,6 +15,7 @@ function onMouseMove(e) {
     if (dot.style.opacity === '0' || dot.style.opacity === '') {
         gsap.to(dot, { opacity: 1, duration: 0.3 });
         gsap.to(blurEl, { opacity: 0.1, duration: 0.3 });
+        gsap.to(blurEl2, { opacity: 0.2, duration: 0.3 });
     }
 
     // Direct values to the GSAP quickTo setters
@@ -21,6 +23,8 @@ function onMouseMove(e) {
     yToDot(e.clientY);
     xToBlur(e.clientX);
     yToBlur(e.clientY);
+    xToBlur2(e.clientX);
+    yToBlur2(e.clientY);
 }
 
 export function initCustomCursor() {
@@ -41,12 +45,18 @@ export function initCustomCursor() {
     blurEl.className = 'custom-cursor-blur';
     blurEl.style.opacity = '0';
 
+    blurEl2 = document.createElement('div');
+    blurEl2.className = 'custom-cursor-blur-medium';
+    blurEl2.style.opacity = '0';
+
     document.body.appendChild(dot);
     document.body.appendChild(blurEl);
+    document.body.appendChild(blurEl2);
 
     // Initial positioning offsets using GSAP
     gsap.set(dot, { xPercent: -50, yPercent: -50 });
     gsap.set(blurEl, { xPercent: -50, yPercent: -50 });
+    gsap.set(blurEl2, { xPercent: -50, yPercent: -50 });
 
     // Set up optimized quick setters
     // Small dot follows almost instantly (duration: 0.08s)
@@ -57,6 +67,10 @@ export function initCustomCursor() {
     xToBlur = gsap.quickTo(blurEl, 'x', { duration: 1.2, ease: 'power2.out' });
     yToBlur = gsap.quickTo(blurEl, 'y', { duration: 1.2, ease: 'power2.out' });
 
+    // Medium blur circle chases with a ~300ms duration (duration: 0.3s)
+    xToBlur2 = gsap.quickTo(blurEl2, 'x', { duration: 0.3, ease: 'power2.out' });
+    yToBlur2 = gsap.quickTo(blurEl2, 'y', { duration: 0.3, ease: 'power2.out' });
+
     initialized = true;
 
     // Track mouse movement
@@ -64,10 +78,11 @@ export function initCustomCursor() {
 
     // Handle mouse leaving and entering window
     document.addEventListener('mouseleave', () => {
-        gsap.to([dot, blurEl], { opacity: 0, duration: 0.3 });
+        gsap.to([dot, blurEl, blurEl2], { opacity: 0, duration: 0.3 });
     });
     document.addEventListener('mouseenter', () => {
         gsap.to(dot, { opacity: 1, duration: 0.3 });
         gsap.to(blurEl, { opacity: 0.1, duration: 0.3 });
+        gsap.to(blurEl2, { opacity: 0.2, duration: 0.3 });
     });
 }

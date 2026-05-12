@@ -701,11 +701,13 @@ img {
     object-fit: cover;
     border-radius: var(--radius-md);
     filter: grayscale(100%);
-    transition: filter var(--transition-fast);
+    opacity: 0.5;
+    transition: filter var(--transition-fast), opacity var(--transition-fast);
 }
 
 .project-thumb:hover img {
     filter: grayscale(0%);
+    opacity: 1;
 }
 
 .project-thumb .duotone-overlay {
@@ -987,6 +989,21 @@ body, a, button, select, input, textarea, .project-thumb, .filter-btn, .menu-ite
     will-change: transform;
 }
 
+.custom-cursor-blur-medium {
+    width: 32px;
+    height: 32px;
+    background-color: var(--color-black);
+    border-radius: 50%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 100004;
+    filter: blur(16px);
+    opacity: 0.2;
+    will-change: transform;
+}
+
 .portfolio-cursor-title {
     position: fixed;
     top: 0;
@@ -1011,7 +1028,7 @@ body, a, button, select, input, textarea, .project-thumb, .filter-btn, .menu-ite
 
 /* Disable custom cursor on mobile/touch screens */
 @media (hover: none) and (pointer: coarse) {
-    .custom-cursor-dot, .custom-cursor-blur, .portfolio-cursor-title {
+    .custom-cursor-dot, .custom-cursor-blur, .custom-cursor-blur-medium, .portfolio-cursor-title {
         display: none !important;
     }
     body, a, button, select, input, textarea, .project-thumb, .filter-btn, .menu-item, .lang-btn, .logo, .contact-me, .project-media-item img, .project-image-popup-close {

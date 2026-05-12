@@ -349,17 +349,45 @@ export function postRenderPortfolio() {
         portfolioPage.appendChild(tooltip);
 
         let activeThumb = null;
+        let xToTooltip, yToTooltip;
+
+        if (typeof gsap !== 'undefined') {
+            gsap.set(tooltip, { xPercent: 0, yPercent: -50, x: 0, y: 0 });
+            xToTooltip = gsap.quickTo(tooltip, 'x', { duration: 0.6, ease: 'power2.out' });
+            yToTooltip = gsap.quickTo(tooltip, 'y', { duration: 0.6, ease: 'power2.out' });
+        }
 
         portfolioPage.addEventListener('mousemove', (e) => {
-            tooltip.style.transform = `translate3d(${e.clientX + 20}px, ${e.clientY}px, 0) translateY(-50%)`;
+            const targetX = e.clientX + 20;
+            const targetY = e.clientY;
+            if (xToTooltip && yToTooltip) {
+                xToTooltip(targetX);
+                yToTooltip(targetY);
+            } else {
+                tooltip.style.transform = `translate3d(${targetX}px, ${targetY}px, 0) translateY(-50%)`;
+            }
         });
 
         portfolioPage.addEventListener('mouseover', (e) => {
             const thumb = e.target.closest('.project-thumb');
             if (thumb && thumb !== activeThumb) {
-                activeThumb = thumb;
                 const title = thumb.dataset.title || '';
                 tooltip.textContent = title;
+
+                // Snap position instantly on first hover so it doesn't glide from (0,0)
+                const startX = e.clientX + 20;
+                const startY = e.clientY;
+                if (typeof gsap !== 'undefined') {
+                    gsap.set(tooltip, { x: startX, y: startY });
+                    if (xToTooltip && yToTooltip) {
+                        xToTooltip(startX);
+                        yToTooltip(startY);
+                    }
+                } else {
+                    tooltip.style.transform = `translate3d(${startX}px, ${startY}px, 0) translateY(-50%)`;
+                }
+
+                activeThumb = thumb;
                 tooltip.classList.add('visible');
             }
         });
