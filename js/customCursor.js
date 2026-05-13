@@ -78,7 +78,7 @@ export function initCustomCursor() {
 
     // Hover effects for all interactive elements using event delegation
     document.addEventListener('mouseover', (e) => {
-        const target = e.target.closest('a, button, [role="button"], .project-thumb, .filter-btn, .menu-item, .lang-btn, .logo, .contact-me, video, .project-media-item img');
+        const target = e.target.closest('a, button, [role="button"], .project-thumb, .filter-btn, .menu-item, .lang-btn, .logo, .contact-me, video, .project-media-item img, .viewer360-container');
         if (target) {
             gsap.to(dot, {
                 scale: 2.2,
@@ -91,7 +91,7 @@ export function initCustomCursor() {
     });
 
     document.addEventListener('mouseout', (e) => {
-        const target = e.target.closest('a, button, [role="button"], .project-thumb, .filter-btn, .menu-item, .lang-btn, .logo, .contact-me, video, .project-media-item img');
+        const target = e.target.closest('a, button, [role="button"], .project-thumb, .filter-btn, .menu-item, .lang-btn, .logo, .contact-me, video, .project-media-item img, .viewer360-container');
         if (target) {
             gsap.to(dot, {
                 scale: 1.0,

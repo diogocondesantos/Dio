@@ -1218,6 +1218,15 @@ img {
         grid-template-columns: 1fr;
     }
 
+    .project-media-item--360 {
+        grid-column: 1 !important;
+        grid-row: auto !important;
+    }
+    
+    .viewer360-container {
+        height: 360px !important;
+    }
+
     .floating-menu {
         bottom: 20px !important;
         left: 50% !important;
