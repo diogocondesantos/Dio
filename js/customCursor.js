@@ -76,6 +76,33 @@ export function initCustomCursor() {
     // Track mouse movement
     window.addEventListener('mousemove', onMouseMove);
 
+    // Hover effects for all interactive elements using event delegation
+    document.addEventListener('mouseover', (e) => {
+        const target = e.target.closest('a, button, [role="button"], .project-thumb, .filter-btn, .menu-item, .lang-btn, .logo, .contact-me');
+        if (target) {
+            gsap.to(dot, {
+                scale: 2.2,
+                backgroundColor: 'rgba(0, 0, 0, 0.05)',
+                border: '1.5px solid var(--color-black, #000000)',
+                duration: 0.3,
+                ease: 'power2.out'
+            });
+        }
+    });
+
+    document.addEventListener('mouseout', (e) => {
+        const target = e.target.closest('a, button, [role="button"], .project-thumb, .filter-btn, .menu-item, .lang-btn, .logo, .contact-me');
+        if (target) {
+            gsap.to(dot, {
+                scale: 1.0,
+                backgroundColor: 'var(--color-black, #000000)',
+                border: '1.5px solid transparent',
+                duration: 0.3,
+                ease: 'power2.out'
+            });
+        }
+    });
+
     // Handle mouse leaving and entering window
     document.addEventListener('mouseleave', () => {
         gsap.to([dot, blurEl, blurEl2], { opacity: 0, duration: 0.3 });
