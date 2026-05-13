@@ -5,6 +5,7 @@
 
 import { t, getCurrentLang } from './i18n.js';
 import { getProjects, getProjectById, getProjectsByCategory } from './data.js';
+import { initProfileDisplacement } from './profileDisplacement.js';
 
 let homeCarouselInterval = null;
 let currentCarouselIndex = 0;
@@ -179,6 +180,8 @@ export function destroyHomeCarousel() {
 
 // --- ABOUT PAGE ---
 
+// --- ABOUT PAGE ---
+
 export function renderAboutPage() {
     return `
     <div class="page page-about">
@@ -187,32 +190,477 @@ export function renderAboutPage() {
             <div class="about-copy">
                 <div class="about-space"></div>
                 <div class="about-intro">
-                    <p>
-                        <span data-i18n="about.intro_part1">I'm Diogo Conde, a </span><strong data-i18n="about.intro_bold">Creative Technologist</strong><span data-i18n="about.intro_part2"> at the intersection of design and code. I craft aesthetics down to the millimeter and bring them to life through technology, whether on a screen, a virtual stage, or a physical installation.</span>
-                    </p>
-                </div>
-                <div class="about-details">
-                    <div class="about-timeline">
-                        <span class="timeline-label" data-i18n="about.timeline_origin">THE ORIGIN</span>
-                        <div class="timeline-line"></div>
-                        <span class="timeline-label" data-i18n="about.timeline_direction">CREATIVE & TECHNICAL DIRECTION</span>
-                        <div class="timeline-line"></div>
-                        <span class="timeline-label" data-i18n="about.timeline_explorer">THE EXPLORER SIDE</span>
+                    <div class="about-intro-text active" data-content="default">
+                        <p>
+                            <span data-i18n="about.intro_part1">I'm Diogo Santos, a </span><strong data-i18n="about.intro_bold">Creative Technologist</strong><span data-i18n="about.intro_part2"> at the intersection of design and code. I craft aesthetics down to the millimeter and bring them to life through technology, whether on a screen, a virtual stage, or a physical installation.</span>
+                        </p>
                     </div>
-                    <div class="about-columns">
+                    <div class="about-intro-text" data-content="origin" style="display: none; opacity: 0;">
                         <p data-i18n="about.col1">My entire professional life has been linked to graphic and digital design. It's an old passion—ever since I was a child watching cartoons, I knew exactly what I wanted to do. Today, I turn that imagination into reality through Design, Animation and Visual Effects.</p>
+                    </div>
+                    <div class="about-intro-text" data-content="direction" style="display: none; opacity: 0;">
                         <p data-i18n="about.col2">In my last role, I worked as a Creative and Technical Director, taking responsibility for all 3D virtual production in the events and advertising sectors, as well as content creation and event planning. My role went far beyond visual execution, it involved designing immersive environments, creating animations and visual effects.</p>
+                    </div>
+                    <div class="about-intro-text" data-content="explorer" style="display: none; opacity: 0;">
                         <p data-i18n="about.col3">I consider myself an eternally curious mind and a chronic self-taught learner, always on the lookout for new technologies. This need to explore led me to test Artificial Intelligence tools, develop applications for various platforms, and dive into electronics. I love getting my hands dirty programming, creating immersive interactive installations that bridge the physical and digital worlds.</p>
+                    </div>
+                </div>
+                <div class="about-timeline-container">
+                    <div class="about-timeline">
+                        <div class="timeline-node" data-node="origin">
+                            <svg viewBox="0 0 120 120" class="timeline-svg">
+                                <path id="path-origin" d="M 60,100 a 40,40 0 1,1 0.1,0 Z" fill="none" stroke="none" />
+                                <text class="timeline-text-path">
+                                    <textPath href="#path-origin" startOffset="50%" text-anchor="middle" data-i18n="about.timeline_origin">THE ORIGIN</textPath>
+                                </text>
+                                <circle cx="60" cy="60" r="10" class="magnetic-dot" data-force="0.2" />
+                                <circle cx="60" cy="60" r="5" class="magnetic-dot" data-force="0.4" />
+                                <circle cx="60" cy="60" r="8" class="magnetic-dot" data-force="0.6" />
+                                <circle cx="60" cy="60" r="4" class="magnetic-dot" data-force="0.8" />
+                                <circle cx="60" cy="60" r="16" class="timeline-shape shape-circle" />
+                            </svg>
+                        </div>
+                        <div class="timeline-line-connector"></div>
+                        <div class="timeline-node" data-node="direction">
+                            <svg viewBox="0 0 120 120" class="timeline-svg">
+                                <path id="path-direction" d="M 60,105 a 45,45 0 1,1 0.1,0 Z" fill="none" stroke="none" />
+                                <text class="timeline-text-path">
+                                    <textPath href="#path-direction" startOffset="50%" text-anchor="middle" data-i18n="about.timeline_direction">CREATIVE & TECHNICAL DIRECTION</textPath>
+                                </text>
+                                <g class="pyramid-group" style="transform-origin: 60px 60px;">
+                                    <polygon points="60,48 69,66 51,66" class="pyramid-triangle tri-1" />
+                                    <polygon points="60,48 69,66 51,66" class="pyramid-triangle tri-2" />
+                                    <polygon points="60,48 69,66 51,66" class="pyramid-triangle tri-3" />
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="timeline-line-connector"></div>
+                        <div class="timeline-node" data-node="explorer">
+                            <svg viewBox="0 0 120 120" class="timeline-svg">
+                                <path id="path-explorer" d="M 60,100 a 40,40 0 1,1 0.1,0 Z" fill="none" stroke="none" />
+                                <text class="timeline-text-path">
+                                    <textPath href="#path-explorer" startOffset="50%" text-anchor="middle" data-i18n="about.timeline_explorer">THE EXPLORER SIDE</textPath>
+                                </text>
+                                <g class="square-grid-group" style="transform-origin: 60px 60px;">
+                                    <rect x="44" y="44" width="16" height="16" rx="0" ry="0" fill="currentColor" class="shape-square-grid sq-tl" />
+                                    <rect x="60" y="44" width="16" height="16" rx="0" ry="0" fill="currentColor" class="shape-square-grid sq-tr" />
+                                    <rect x="44" y="60" width="16" height="16" rx="0" ry="0" fill="currentColor" class="shape-square-grid sq-bl" />
+                                    <rect x="60" y="60" width="16" height="16" rx="0" ry="0" fill="currentColor" class="shape-square-grid sq-br" />
+                                </g>
+                            </svg>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="about-photo">
-                <img src="assets/images/profile.png" alt="Diogo Conde">
+                <img src="assets/images/profile.jpg" alt="Diogo Santos">
             </div>
         </div>
         ${renderFooter()}
     </div>`;
 }
+
+export function postRenderAbout() {
+    const originNode = document.querySelector('.page-about .timeline-node[data-node="origin"]');
+    const directionNode = document.querySelector('.page-about .timeline-node[data-node="direction"]');
+    const explorerNode = document.querySelector('.page-about .timeline-node[data-node="explorer"]');
+    const magneticDots = document.querySelectorAll('.page-about .magnetic-dot');
+    const pageContainer = document.querySelector('.page-about');
+    
+    // Create floating glass box tooltip
+    let tooltip = null;
+    if (pageContainer) {
+        tooltip = document.createElement('div');
+        tooltip.className = 'timeline-glass-tooltip';
+        pageContainer.appendChild(tooltip);
+
+        if (window.gsap) {
+            window.gsap.set(tooltip, { x: 0, y: 0, scale: 0.8, opacity: 0 });
+        }
+
+        const nodes = [
+            { el: originNode, titleKey: 'about.timeline_origin', descKey: 'about.col1' },
+            { el: directionNode, titleKey: 'about.timeline_direction', descKey: 'about.col2' },
+            { el: explorerNode, titleKey: 'about.timeline_explorer', descKey: 'about.col3' }
+        ];
+
+        nodes.forEach(node => {
+            if (node.el) {
+                node.el.addEventListener('mouseenter', (e) => {
+                    const desc = t(node.descKey) || '';
+                    
+                    tooltip.innerHTML = `
+                        <p>${desc}</p>
+                    `;
+                    
+                    tooltip.classList.add('visible');
+                    
+                    // Set initial positioning instantly so it doesn't glide from (0,0)
+                    const offset = 25;
+                    let startX = e.clientX + offset;
+                    let startY = e.clientY + offset;
+                    const tooltipWidth = 380;
+                    if (startX + tooltipWidth > window.innerWidth) {
+                        startX = e.clientX - tooltipWidth - offset;
+                    }
+                    const tooltipHeight = tooltip.offsetHeight || 250;
+                    if (startY + tooltipHeight > window.innerHeight) {
+                        startY = e.clientY - tooltipHeight - offset;
+                    }
+                    
+                    if (window.gsap) {
+                        window.gsap.set(tooltip, { x: startX, y: startY });
+                        window.gsap.to(tooltip, {
+                            opacity: 1,
+                            scale: 1,
+                            duration: 0.4,
+                            ease: 'power2.out',
+                            overwrite: 'auto'
+                        });
+                    } else {
+                        tooltip.style.opacity = '1';
+                        tooltip.style.transform = `translate3d(${startX}px, ${startY}px, 0) scale(1)`;
+                    }
+                });
+
+                node.el.addEventListener('mouseleave', () => {
+                    tooltip.classList.remove('visible');
+                    if (window.gsap) {
+                        window.gsap.to(tooltip, {
+                            opacity: 0,
+                            scale: 0.8,
+                            duration: 0.3,
+                            ease: 'power2.in',
+                            overwrite: 'auto'
+                        });
+                    } else {
+                        tooltip.style.opacity = '0';
+                    }
+                });
+            }
+        });
+    }
+    
+    // Initialize pyramid group scale to 1.78 (32px height) on load cleanly via GSAP (avoids clashing with inline CSS styles)
+    if (directionNode) {
+        const pyramidGroup = directionNode.querySelector('.pyramid-group');
+        if (pyramidGroup) {
+            window.gsap.set(pyramidGroup, { scale: 1.78, svgOrigin: "60 60" });
+        }
+    }
+    
+    if (pageContainer) {
+        let isHovered = false;
+        let targetX = 0;
+        let targetY = 0;
+        
+        let isDirHovered = false;
+        let targetAngle = 0;
+        
+        let isExpHovered = false;
+        let expDist = 150; // mouse distance to explorer node, default to max
+        let targetExpDeltaX = 0;
+        let targetExpDeltaY = 0;
+        
+        // 4 smoothed factors, one for each square to introduce individual, staggered delay / lag
+        const currentRepelFactors = [0, 0, 0, 0];
+        
+        // Individual lerp speeds (smaller speed = heavier delay/lag in response)
+        const sqLerpSpeeds = [0.015, 0.025, 0.035, 0.045];
+        
+        // Individual random angular offsets (adds custom scatter randomness to their repel directions)
+        const sqAngleOffsets = [];
+        for (let i = 0; i < 4; i++) {
+            // Random offset angle between -45 and +45 degrees in radians
+            sqAngleOffsets.push((Math.random() - 0.5) * (Math.PI / 2));
+        }
+        
+        // Individual force multipliers to create high variation in displacement (some fly much further than others)
+        const sqForceMultipliers = [0.65, 1.45, 0.90, 1.75];
+        
+        const activationDistance = 150; // Trigger distance in pixels
+        
+        pageContainer.addEventListener('mousemove', (e) => {
+            // Update tooltip position if visible
+            if (tooltip && tooltip.classList.contains('visible')) {
+                const offset = 25;
+                let tX = e.clientX + offset;
+                let tY = e.clientY + offset;
+                
+                const tooltipWidth = 380;
+                const tooltipHeight = tooltip.offsetHeight || 250;
+                
+                if (tX + tooltipWidth > window.innerWidth) {
+                    tX = e.clientX - tooltipWidth - offset;
+                }
+                if (tY + tooltipHeight > window.innerHeight) {
+                    tY = e.clientY - tooltipHeight - offset;
+                }
+                if (tY < 0) {
+                    tY = offset;
+                }
+                
+                if (window.gsap) {
+                    window.gsap.to(tooltip, {
+                        x: tX,
+                        y: tY,
+                        duration: 1.0,
+                        ease: 'power2.out',
+                        overwrite: 'auto'
+                    });
+                } else {
+                    tooltip.style.transform = `translate3d(${tX}px, ${tY}px, 0)`;
+                }
+            }
+
+            // 1. Origin Node Physics Calculation (Particles)
+            if (originNode && magneticDots.length > 0) {
+                const rect = originNode.getBoundingClientRect();
+                const centerX = rect.left + rect.width / 2;
+                const centerY = rect.top + rect.height / 2;
+                const deltaX = e.clientX - centerX;
+                const deltaY = e.clientY - centerY;
+                const dist = Math.sqrt(deltaX * deltaX + deltaY * deltaY);
+                
+                if (dist < activationDistance) {
+                    isHovered = true;
+                    const maxDist = 45;
+                    if (dist > maxDist) {
+                        targetX = (deltaX / dist) * maxDist;
+                        targetY = (deltaY / dist) * maxDist;
+                    } else {
+                        targetX = deltaX;
+                        targetY = deltaY;
+                    }
+                } else {
+                    isHovered = false;
+                    targetX = 0;
+                    targetY = 0;
+                }
+            }
+            
+            // 2. Direction Node Physics Calculation (Pyramid Rotation)
+            if (directionNode) {
+                const rect = directionNode.getBoundingClientRect();
+                const centerX = rect.left + rect.width / 2;
+                const centerY = rect.top + rect.height / 2;
+                const deltaX = e.clientX - centerX;
+                const deltaY = e.clientY - centerY;
+                const dist = Math.sqrt(deltaX * deltaX + deltaY * deltaY);
+                
+                if (dist < activationDistance) {
+                    isDirHovered = true;
+                    // Math.atan2 gives the angle in radians. We add 90 degrees (Math.PI / 2) because 
+                    // the triangle points UP natively, but Math.atan2 0 is rightward.
+                    const angleRad = Math.atan2(deltaY, deltaX);
+                    targetAngle = angleRad * (180 / Math.PI) + 90;
+                } else {
+                    isDirHovered = false;
+                    targetAngle = 0;
+                }
+            }
+            
+            // 3. Explorer Node Physics Calculation (Repelling Grid Squares)
+            if (explorerNode) {
+                const rect = explorerNode.getBoundingClientRect();
+                const centerX = rect.left + rect.width / 2;
+                const centerY = rect.top + rect.height / 2;
+                const deltaX = e.clientX - centerX;
+                const deltaY = e.clientY - centerY;
+                expDist = Math.sqrt(deltaX * deltaX + deltaY * deltaY);
+                
+                if (expDist < activationDistance) {
+                    isExpHovered = true;
+                    targetExpDeltaX = deltaX;
+                    targetExpDeltaY = deltaY;
+                } else {
+                    isExpHovered = false;
+                    targetExpDeltaX = 0;
+                    targetExpDeltaY = 0;
+                }
+            }
+        });
+        
+        // Reset if mouse leaves the page entirely
+        pageContainer.addEventListener('mouseleave', () => {
+            isHovered = false;
+            targetX = 0;
+            targetY = 0;
+            isDirHovered = false;
+            targetAngle = 0;
+            isExpHovered = false;
+            expDist = 150;
+            targetExpDeltaX = 0;
+            targetExpDeltaY = 0;
+        });
+
+        // Continuous Physics Loop
+        function renderLoop() {
+            if (!document.querySelector('.page-about')) return; // Stop loop if page changes
+            
+            const time = performance.now() * 0.001;
+            
+            if (window.gsap) {
+                // Animate Origin Particles
+                if (magneticDots.length > 0) {
+                    magneticDots.forEach((dot, index) => {
+                        const baseForce = parseFloat(dot.dataset.force || 0.2);
+                        const dynamicForce = baseForce + Math.sin(time * 0.5 + index) * 0.15;
+                        
+                        const noiseAmplitude = isHovered ? 12 : 6;
+                        const noiseX = Math.sin(time * 1.5 + index * 2.1) * noiseAmplitude;
+                        const noiseY = Math.cos(time * 1.1 + index * 1.7) * noiseAmplitude;
+                        
+                        const finalX = (targetX * dynamicForce) + noiseX;
+                        const finalY = (targetY * dynamicForce) + noiseY;
+                        
+                        const animDuration = isHovered 
+                            ? 0.6 + (index * 0.35) 
+                            : 2.0 + (index * 0.6);
+                        
+                        window.gsap.to(dot, {
+                            x: finalX,
+                            y: finalY,
+                            duration: animDuration,
+                            ease: "power2.out",
+                            overwrite: "auto"
+                        });
+                    });
+                }
+                
+                // Animate Direction Pyramid Morph and Rotation
+                if (directionNode) {
+                    const pyramidGroup = directionNode.querySelector('.pyramid-group');
+                    const tri1 = directionNode.querySelector('.tri-1');
+                    const tri2 = directionNode.querySelector('.tri-2');
+                    const tri3 = directionNode.querySelector('.tri-3');
+                    
+                    if (pyramidGroup && tri1 && tri2 && tri3) {
+                        if (isDirHovered) {
+                            // Expand the 3 stacked triangles outwards into a mathematically centered perfect pyramid
+                            window.gsap.to(tri1, {
+                                x: 0,
+                                y: -12,
+                                duration: 0.6,
+                                ease: "back.out(1.5)",
+                                overwrite: "auto"
+                            });
+                            window.gsap.to(tri2, {
+                                x: -10,
+                                y: 6,
+                                duration: 0.6,
+                                ease: "back.out(1.5)",
+                                overwrite: "auto"
+                            });
+                            window.gsap.to(tri3, {
+                                x: 10,
+                                y: 6,
+                                duration: 0.6,
+                                ease: "back.out(1.5)",
+                                overwrite: "auto"
+                            });
+                            
+                            // Rotate and shrink the entire pyramid group perfectly around (60, 60) to point at mouse
+                            window.gsap.to(pyramidGroup, {
+                                scale: 1.0,
+                                rotation: targetAngle + "_short",
+                                svgOrigin: "60 60",
+                                duration: 0.8,
+                                ease: "power2.out",
+                                overwrite: "auto"
+                            });
+                        } else {
+                            // Collapse all 3 triangles back to the center (fully overlapping at 60,60)
+                            window.gsap.to([tri1, tri2, tri3], {
+                                x: 0,
+                                y: 0,
+                                duration: 1.0,
+                                ease: "power3.out",
+                                overwrite: "auto"
+                            });
+                            
+                            // Reset parent group rotation and expand scale to 1.78 (32px height) around (60, 60)
+                            window.gsap.to(pyramidGroup, {
+                                scale: 1.78,
+                                rotation: 0,
+                                svgOrigin: "60 60",
+                                duration: 1.2,
+                                ease: "power2.out",
+                                overwrite: "auto"
+                            });
+                        }
+                    }
+                }
+                
+                // Animate Explorer - 4 Custom Repelling Grid Squares
+                if (explorerNode) {
+                    const gridSquares = [
+                        explorerNode.querySelector('.sq-tl'),
+                        explorerNode.querySelector('.sq-tr'),
+                        explorerNode.querySelector('.sq-bl'),
+                        explorerNode.querySelector('.sq-br')
+                    ];
+
+                    const maxRepelDistance = 40; // max pixels they drift apart in opposite direction of mouse
+
+                    // Calculate base repel direction away from mouse
+                    const len = Math.sqrt(targetExpDeltaX * targetExpDeltaX + targetExpDeltaY * targetExpDeltaY) || 1;
+                    const repelX = -targetExpDeltaX / len;
+                    const repelY = -targetExpDeltaY / len;
+
+                    gridSquares.forEach((sq, index) => {
+                        if (sq) {
+                            // Update individual factor with unique lerp speed for staggered delay/lag
+                            const targetFactor = isExpHovered ? Math.max(0, 1 - (expDist / activationDistance)) : 0;
+                            currentRepelFactors[index] += (targetFactor - currentRepelFactors[index]) * sqLerpSpeeds[index];
+                            
+                            const factor = currentRepelFactors[index];
+
+                            // "quanto mais perto estou do centro mais eles se mexem e quanto mais afasto estou menos eles se mexem"
+                            // Directly proportional dampening: maximum scatter/vibration when pushed far out (factor -> 1)
+                            const randomDampening = factor;
+
+                            // Rotate the base repel direction by the unique angle offset (scales down with distance)
+                            const angleOffset = sqAngleOffsets[index] * randomDampening;
+                            const cos = Math.cos(angleOffset);
+                            const sin = Math.sin(angleOffset);
+                            const finalRepelX = repelX * cos - repelY * sin;
+                            const finalRepelY = repelX * sin + repelY * cos;
+
+                            // Unique noise - also scales down as they fly further out
+                            const noiseAmplitude = isExpHovered ? 12 : 0;
+                            const noiseX = Math.sin(time * 1.8 + index * 2.5) * noiseAmplitude * randomDampening;
+                            const noiseY = Math.cos(time * 1.4 + index * 1.9) * noiseAmplitude * randomDampening;
+                            
+                            // Base force multiplier per square from the predefined highly-varied array
+                            const baseForce = sqForceMultipliers[index];
+                            const repelDist = maxRepelDistance * factor * baseForce;
+                            
+                            const targetX = finalRepelX * repelDist + noiseX;
+                            const targetY = finalRepelY * repelDist + noiseY;
+                            
+                            window.gsap.to(sq, {
+                                x: targetX,
+                                y: targetY,
+                                duration: 0.45,
+                                ease: "power2.out",
+                                overwrite: "auto"
+                            });
+                        }
+                    });
+                }
+            }
+            
+            requestAnimationFrame(renderLoop);
+        }
+        
+        renderLoop();
+    }
+
+    // Initialize WebGL displacement effect on the profile picture
+    initProfileDisplacement();
+}
+
 
 // --- PORTFOLIO PAGE ---
 

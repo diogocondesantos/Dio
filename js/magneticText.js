@@ -56,9 +56,9 @@ export function initMagneticText() {
     if (chars.length === 0) return;
 
     // --- Tuning knobs ---------------------------------------------------
-    const RADIUS   = 220;   // px – influence zone around the cursor
+    const RADIUS   = 380;   // px – influence zone around the cursor
     const STRENGTH = 0.40;  // 0-1  – max fraction of the distance the letter travels
-    const EASE_BACK = 0.25; // seconds – how fast letters ease back to rest
+    const EASE_BACK = 0.85; // seconds – how fast letters ease back to rest
 
     // --- Cache letter positions (recompute on resize) -------------------
     let charData = []; // { el, cx, cy }

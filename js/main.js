@@ -7,7 +7,7 @@ import { loadProjectsData } from './data.js';
 import { registerRoute, initRouter } from './router.js';
 import {
     renderHomePage, postRenderHome, destroyHomeCarousel,
-    renderAboutPage,
+    renderAboutPage, postRenderAbout,
     renderPortfolioPage, postRenderPortfolio,
     renderProjectPage, postRenderProject
 } from './pages.js';
@@ -44,6 +44,9 @@ document.addEventListener('DOMContentLoaded', async () => {
         if (currentRoute === 'home') {
             postRenderHome();
             initMagneticText();
+        }
+        if (currentRoute === 'about') {
+            postRenderAbout();
         }
         if (currentRoute === 'portfolio') {
             postRenderPortfolio();
