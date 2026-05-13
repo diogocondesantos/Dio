@@ -12,7 +12,7 @@ import {
     renderProjectPage, postRenderProject
 } from './pages.js';
 import { initMagneticText, destroyMagneticText } from './magneticText.js';
-import { initCustomCursor } from './customCursor.js';
+import { initCustomCursor, resetCustomCursor } from './customCursor.js';
 import { initMagneticMenu, updateMagneticMenuPositions } from './magneticMenu.js';
 
 document.addEventListener('DOMContentLoaded', async () => {
@@ -36,6 +36,9 @@ document.addEventListener('DOMContentLoaded', async () => {
     initRouter((currentRoute, hash) => {
         // Post-render hooks
         updateDOM();
+
+        // Reset custom cursor style to default on page navigation
+        resetCustomCursor();
 
         // Clean up magnetic text and home carousel when leaving home
         destroyMagneticText();

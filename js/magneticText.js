@@ -118,11 +118,33 @@ export function initMagneticText() {
     const container = document.querySelector('.home-copy');
     if (!container) return;
 
+    function onTouchMove(e) {
+        if (e.touches.length > 0) {
+            mouseX = e.touches[0].clientX;
+            mouseY = e.touches[0].clientY;
+        }
+    }
+
+    function onTouchStart(e) {
+        if (e.touches.length > 0) {
+            mouseX = e.touches[0].clientX;
+            mouseY = e.touches[0].clientY;
+        }
+    }
+
+    function onTouchEnd() {
+        mouseX = -9999;
+        mouseY = -9999;
+    }
+
     container.addEventListener('mousemove', onMouseMove);
     container.addEventListener('mouseleave', () => {
         mouseX = -9999;
         mouseY = -9999;
     });
+    container.addEventListener('touchmove', onTouchMove, { passive: true });
+    container.addEventListener('touchstart', onTouchStart, { passive: true });
+    container.addEventListener('touchend', onTouchEnd, { passive: true });
 
     window.addEventListener('resize', cachePositions);
 
@@ -133,6 +155,9 @@ export function initMagneticText() {
     _cleanup = () => {
         cancelAnimationFrame(rafId);
         container.removeEventListener('mousemove', onMouseMove);
+        container.removeEventListener('touchmove', onTouchMove);
+        container.removeEventListener('touchstart', onTouchStart);
+        container.removeEventListener('touchend', onTouchEnd);
         window.removeEventListener('resize', cachePositions);
 
         // Reset all chars to their original position

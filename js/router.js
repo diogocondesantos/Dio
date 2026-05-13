@@ -53,8 +53,9 @@ export function initRouter(onRouteChange) {
         // Update menu active states
         updateMenuActiveStates(hash);
 
-        // Toggle body scroll lock for fullscreen pages
-        const noScrollPages = ['home', 'about'];
+        // Toggle body scroll lock for fullscreen pages (desktop only)
+        const isDesktop = window.innerWidth > 767;
+        const noScrollPages = isDesktop ? ['home', 'about'] : [];
         document.body.classList.toggle('no-scroll', noScrollPages.includes(currentRoute));
 
         // Scroll to top on page change

@@ -284,59 +284,182 @@ export function postRenderAbout() {
             { el: explorerNode, titleKey: 'about.timeline_explorer', descKey: 'about.col3' }
         ];
 
-        nodes.forEach(node => {
-            if (node.el) {
-                node.el.addEventListener('mouseenter', (e) => {
-                    const desc = t(node.descKey) || '';
-                    
-                    tooltip.innerHTML = `
-                        <p>${desc}</p>
-                    `;
-                    
-                    tooltip.classList.add('visible');
-                    
-                    // Set initial positioning instantly so it doesn't glide from (0,0)
-                    const offset = 25;
-                    let startX = e.clientX + offset;
-                    let startY = e.clientY + offset;
-                    const tooltipWidth = 380;
-                    if (startX + tooltipWidth > window.innerWidth) {
-                        startX = e.clientX - tooltipWidth - offset;
-                    }
-                    const tooltipHeight = tooltip.offsetHeight || 250;
-                    if (startY + tooltipHeight > window.innerHeight) {
-                        startY = e.clientY - tooltipHeight - offset;
-                    }
-                    
-                    if (window.gsap) {
-                        window.gsap.set(tooltip, { x: startX, y: startY });
-                        window.gsap.to(tooltip, {
-                            opacity: 1,
-                            scale: 1,
-                            duration: 0.4,
-                            ease: 'power2.out',
-                            overwrite: 'auto'
-                        });
-                    } else {
-                        tooltip.style.opacity = '1';
-                        tooltip.style.transform = `translate3d(${startX}px, ${startY}px, 0) scale(1)`;
-                    }
-                });
+        const isDesktop = window.innerWidth > 767 && window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+        if (isDesktop) {
+            nodes.forEach(node => {
+                if (node.el) {
+                    node.el.addEventListener('mouseenter', (e) => {
+                        const desc = t(node.descKey) || '';
+                        
+                        tooltip.innerHTML = `
+                            <p>${desc}</p>
+                        `;
+                        
+                        tooltip.classList.add('visible');
+                        
+                        // Set initial positioning instantly so it doesn't glide from (0,0)
+                        const offset = 25;
+                        let startX = e.clientX + offset;
+                        let startY = e.clientY + offset;
+                        const tooltipWidth = 380;
+                        if (startX + tooltipWidth > window.innerWidth) {
+                            startX = e.clientX - tooltipWidth - offset;
+                        }
+                        const tooltipHeight = tooltip.offsetHeight || 250;
+                        if (startY + tooltipHeight > window.innerHeight) {
+                            startY = e.clientY - tooltipHeight - offset;
+                        }
+                        
+                        if (window.gsap) {
+                            window.gsap.set(tooltip, { x: startX, y: startY, xPercent: 0, yPercent: 0 });
+                            window.gsap.to(tooltip, {
+                                opacity: 1,
+                                scale: 1,
+                                duration: 0.4,
+                                ease: 'power2.out',
+                                overwrite: 'auto'
+                            });
+                        } else {
+                            tooltip.style.opacity = '1';
+                            tooltip.style.transform = `translate3d(${startX}px, ${startY}px, 0) scale(1)`;
+                        }
+                    });
 
-                node.el.addEventListener('mouseleave', () => {
-                    tooltip.classList.remove('visible');
-                    if (window.gsap) {
-                        window.gsap.to(tooltip, {
-                            opacity: 0,
-                            scale: 0.8,
-                            duration: 0.3,
-                            ease: 'power2.in',
-                            overwrite: 'auto'
-                        });
-                    } else {
-                        tooltip.style.opacity = '0';
+                    node.el.addEventListener('mouseleave', () => {
+                        tooltip.classList.remove('visible');
+                        if (window.gsap) {
+                            window.gsap.to(tooltip, {
+                                opacity: 0,
+                                scale: 0.8,
+                                duration: 0.3,
+                                ease: 'power2.in',
+                                overwrite: 'auto'
+                            });
+                        } else {
+                            tooltip.style.opacity = '0';
+                        }
+                    });
+                }
+            });
+        } else {
+            // Mobile centered modal behavior
+            nodes.forEach(node => {
+                if (node.el) {
+                    const clickHandler = (e) => {
+                        e.stopPropagation();
+                        const desc = t(node.descKey) || '';
+                        tooltip.innerHTML = `<p>${desc}</p>`;
+                        tooltip.classList.add('visible');
+                        if (window.gsap) {
+                            window.gsap.set(tooltip, { x: window.innerWidth / 2, y: window.innerHeight / 2, xPercent: -50, yPercent: -50 });
+                            window.gsap.to(tooltip, {
+                                opacity: 1,
+                                scale: 1,
+                                duration: 0.4,
+                                ease: 'power2.out',
+                                overwrite: 'auto'
+                            });
+                        } else {
+                            tooltip.style.opacity = '1';
+                            tooltip.style.transform = `translate3d(${window.innerWidth / 2}px, ${window.innerHeight / 2}px, 0) translate(-50%, -50%) scale(1)`;
+                        }
+                    };
+                    node.el.addEventListener('click', clickHandler);
+                    node.el.addEventListener('touchstart', clickHandler, { passive: true });
+                }
+            });
+
+            // Click outside to close
+            if (pageContainer) {
+                const closeHandler = (e) => {
+                    if (e && e.target && (e.target.closest('.timeline-node') || e.target.closest('.timeline-glass-tooltip'))) return;
+                    if (tooltip && tooltip.classList.contains('visible')) {
+                        tooltip.classList.remove('visible');
+                        if (window.gsap) {
+                            window.gsap.to(tooltip, {
+                                opacity: 0,
+                                scale: 0.8,
+                                duration: 0.3,
+                                ease: 'power2.in',
+                                overwrite: 'auto'
+                            });
+                        } else {
+                            tooltip.style.opacity = '0';
+                        }
                     }
+                };
+                pageContainer.addEventListener('click', closeHandler);
+                pageContainer.addEventListener('touchstart', closeHandler, { passive: true });
+            }
+        }
+    }
+    
+    // Toggle active intro text on node click/tap (excellent for mobile)
+    const introTexts = document.querySelectorAll('.page-about .about-intro-text');
+    const introNodes = [
+        { el: originNode, content: 'origin' },
+        { el: directionNode, content: 'direction' },
+        { el: explorerNode, content: 'explorer' }
+    ];
+
+    let activeContent = 'default';
+
+    if (window.innerWidth > 767 && window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+        introNodes.forEach(node => {
+            if (node.el) {
+                node.el.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    const targetContent = activeContent === node.content ? 'default' : node.content;
+                    switchIntroText(targetContent);
                 });
+                // Support touch start for instantaneous responsiveness on touch screens
+                node.el.addEventListener('touchstart', (e) => {
+                    e.stopPropagation();
+                    const targetContent = activeContent === node.content ? 'default' : node.content;
+                    switchIntroText(targetContent);
+                }, { passive: true });
+            }
+        });
+
+        if (pageContainer) {
+            pageContainer.addEventListener('click', () => {
+                if (activeContent !== 'default') {
+                    switchIntroText('default');
+                }
+            });
+            pageContainer.addEventListener('touchstart', () => {
+                if (activeContent !== 'default') {
+                    switchIntroText('default');
+                }
+            }, { passive: true });
+        }
+    }
+
+    function switchIntroText(targetKey) {
+        if (targetKey === activeContent) return;
+        activeContent = targetKey;
+
+        introTexts.forEach(txt => {
+            const isTarget = txt.dataset.content === targetKey;
+            if (window.gsap) {
+                if (isTarget) {
+                    window.gsap.killTweensOf(txt);
+                    window.gsap.set(txt, { display: 'block' });
+                    window.gsap.to(txt, { opacity: 1, duration: 0.4, ease: 'power2.out' });
+                } else {
+                    window.gsap.killTweensOf(txt);
+                    window.gsap.to(txt, { 
+                        opacity: 0, 
+                        duration: 0.3, 
+                        ease: 'power2.in',
+                        onComplete: () => {
+                            txt.style.display = 'none';
+                        }
+                    });
+                }
+            } else {
+                txt.style.display = isTarget ? 'block' : 'none';
+                txt.style.opacity = isTarget ? '1' : '0';
             }
         });
     }
@@ -382,7 +505,7 @@ export function postRenderAbout() {
         
         pageContainer.addEventListener('mousemove', (e) => {
             // Update tooltip position if visible
-            if (tooltip && tooltip.classList.contains('visible')) {
+            if (tooltip && tooltip.classList.contains('visible') && window.innerWidth > 767 && window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
                 const offset = 25;
                 let tX = e.clientX + offset;
                 let tY = e.clientY + offset;
@@ -729,8 +852,8 @@ function updateFilterPillPosition(filterBar, activeBtn, animate = true) {
     const barRect = filterBar.getBoundingClientRect();
     const btnRect = activeBtn.getBoundingClientRect();
 
-    const relativeLeft = btnRect.left - barRect.left;
-    const relativeTop = btnRect.top - barRect.top;
+    const relativeLeft = (btnRect.left - barRect.left) + filterBar.scrollLeft;
+    const relativeTop = (btnRect.top - barRect.top) + filterBar.scrollTop;
 
     pill.style.left = `${relativeLeft}px`;
     pill.style.top = `${relativeTop}px`;

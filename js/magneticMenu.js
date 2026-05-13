@@ -92,7 +92,29 @@ export function initMagneticMenu() {
         rafId = requestAnimationFrame(tick);
     }
 
+    function onTouchMove(e) {
+        if (e.touches.length > 0) {
+            mouseX = e.touches[0].clientX;
+            mouseY = e.touches[0].clientY;
+        }
+    }
+
+    function onTouchStart(e) {
+        if (e.touches.length > 0) {
+            mouseX = e.touches[0].clientX;
+            mouseY = e.touches[0].clientY;
+        }
+    }
+
+    function onTouchEnd() {
+        mouseX = -9999;
+        mouseY = -9999;
+    }
+
     document.addEventListener('mousemove', onMouseMove);
+    document.addEventListener('touchmove', onTouchMove, { passive: true });
+    document.addEventListener('touchstart', onTouchStart, { passive: true });
+    document.addEventListener('touchend', onTouchEnd, { passive: true });
     window.addEventListener('resize', cachePositions);
 
     rafId = requestAnimationFrame(tick);
@@ -100,6 +122,9 @@ export function initMagneticMenu() {
     _cleanup = () => {
         cancelAnimationFrame(rafId);
         document.removeEventListener('mousemove', onMouseMove);
+        document.removeEventListener('touchmove', onTouchMove);
+        document.removeEventListener('touchstart', onTouchStart);
+        document.removeEventListener('touchend', onTouchEnd);
         window.removeEventListener('resize', cachePositions);
         menus.forEach(menu => {
             gsap.set(menu, { x: 0, y: 0 });

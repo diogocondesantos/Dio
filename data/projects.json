@@ -54,8 +54,7 @@
             { "type": "image", "url": "assets/projects/3d/3d_nos/3d_nos_1.jpg" },
             { "type": "image", "url": "assets/projects/3d/3d_nos/3d_nos_2.jpg" },
             { "type": "video", "url": "assets/projects/3d/3d_nos/3d_nos_3.mp4" },
-            { "type": "video", "url": "assets/projects/3d/3d_nos/3d_nos_4.mp4" },
-            { "type": "image", "url": "assets/projects/3d/3d_nos/3d_nos_5.jpg" }
+            { "type": "video", "url": "assets/projects/3d/3d_nos/3d_nos_4.mp4" }
         ]
     },
     {

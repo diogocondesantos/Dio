@@ -78,7 +78,7 @@ export function initCustomCursor() {
 
     // Hover effects for all interactive elements using event delegation
     document.addEventListener('mouseover', (e) => {
-        const target = e.target.closest('a, button, [role="button"], .project-thumb, .filter-btn, .menu-item, .lang-btn, .logo, .contact-me');
+        const target = e.target.closest('a, button, [role="button"], .project-thumb, .filter-btn, .menu-item, .lang-btn, .logo, .contact-me, video, .project-media-item img');
         if (target) {
             gsap.to(dot, {
                 scale: 2.2,
@@ -91,7 +91,7 @@ export function initCustomCursor() {
     });
 
     document.addEventListener('mouseout', (e) => {
-        const target = e.target.closest('a, button, [role="button"], .project-thumb, .filter-btn, .menu-item, .lang-btn, .logo, .contact-me');
+        const target = e.target.closest('a, button, [role="button"], .project-thumb, .filter-btn, .menu-item, .lang-btn, .logo, .contact-me, video, .project-media-item img');
         if (target) {
             gsap.to(dot, {
                 scale: 1.0,
@@ -111,5 +111,16 @@ export function initCustomCursor() {
         gsap.to(dot, { opacity: 1, duration: 0.3 });
         gsap.to(blurEl, { opacity: 0.1, duration: 0.3 });
         gsap.to(blurEl2, { opacity: 0.2, duration: 0.3 });
+    });
+}
+
+export function resetCustomCursor() {
+    if (!initialized || !dot || typeof gsap === 'undefined') return;
+    gsap.to(dot, {
+        scale: 1.0,
+        backgroundColor: 'var(--color-black, #000000)',
+        border: '1.5px solid transparent',
+        duration: 0.3,
+        ease: 'power2.out'
     });
 }

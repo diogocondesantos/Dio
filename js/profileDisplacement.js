@@ -200,6 +200,14 @@ function setupWebGL(container, img) {
         targetMouseY = 1.0 - ((e.clientY - rect.top) / rect.height); // Invert Y to match UV coordinate space
     }
 
+    function updateTouchPosition(e) {
+        if (e.touches.length > 0) {
+            const rect = canvas.getBoundingClientRect();
+            targetMouseX = (e.touches[0].clientX - rect.left) / rect.width;
+            targetMouseY = 1.0 - ((e.touches[0].clientY - rect.top) / rect.height);
+        }
+    }
+
     // Set up event listeners
     canvas.addEventListener('mousemove', updateMousePosition);
     canvas.addEventListener('mouseenter', (e) => {
@@ -214,6 +222,21 @@ function setupWebGL(container, img) {
     canvas.addEventListener('mouseleave', () => {
         targetHoverVal = 0.0;
     });
+
+    canvas.addEventListener('touchstart', (e) => {
+        targetHoverVal = 1.0;
+        updateTouchPosition(e);
+        mouseX = targetMouseX;
+        mouseY = targetMouseY;
+        lastMouseX = targetMouseX;
+        lastMouseY = targetMouseY;
+    }, { passive: true });
+    canvas.addEventListener('touchmove', (e) => {
+        updateTouchPosition(e);
+    }, { passive: true });
+    canvas.addEventListener('touchend', () => {
+        targetHoverVal = 0.0;
+    }, { passive: true });
 
     // Handle responsive resizing
     function resize() {
